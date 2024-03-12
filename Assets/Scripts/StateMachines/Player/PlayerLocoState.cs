@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerLocoState : PlayerBaseState
 {
-    private bool isDashing = false;
+    
     public PlayerLocoState(PlayerStateMachine stateMachine) : base(stateMachine)
     {
     }
@@ -17,6 +17,7 @@ public class PlayerLocoState : PlayerBaseState
 
     public override void Tick(float deltaTime)
     {
+      
 
         Debug.Log("in Loco State");
         Vector2 movementInput = stateMachine.InputReader.MovementValue;
@@ -26,6 +27,10 @@ public class PlayerLocoState : PlayerBaseState
         if (stateMachine.IsMoving())
         {
             ShrinkPlayer();
+            if(stateMachine.InputReader.Dashing)
+            {
+                stateMachine.SwitchState(new PlayerDashState(stateMachine));
+            }
         }
     }
 

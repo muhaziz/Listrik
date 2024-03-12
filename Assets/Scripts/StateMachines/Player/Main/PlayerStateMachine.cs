@@ -22,6 +22,7 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public LayerMask groundLayer; // Layer yang digunakan untuk deteksi tanah
     [field: SerializeField] public Transform groundCheckPosition; // Posisi pemain untuk deteksi tanah
     [field: SerializeField] public float groundCheckRadius = 0.1f; // Radius deteksi tanah
+    public float DashCooldown { get; private set; } = 5.0f; 
 
     private void Start()
     {
