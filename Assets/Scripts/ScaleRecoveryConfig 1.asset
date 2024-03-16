@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08cd57585a67ef54aa21d9a8b64b6e91, type: 3}
   m_Name: ScaleRecoveryConfig 1
   m_EditorClassIdentifier: 
-  recoveryType: 0
-  recoverySpeed: -0.3
-  maxReduction: -0.5
+  scaleType: 0
+  isInstant: 0
+  scaleSpeed: 0.1
