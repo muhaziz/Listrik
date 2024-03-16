@@ -1,42 +1,46 @@
-using UnityEditor.Callbacks;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerDashState : PlayerBaseState
 {
-    private float dashDurationTimer;
-    private bool isGrounded;
-
     public PlayerDashState(PlayerStateMachine stateMachine) : base(stateMachine)
     {
     }
 
     public override void Enter()
     {
-        dashDurationTimer = stateMachine.DashCooldown;
-        //Dash();
+
     }
 
     public override void Tick(float deltaTime)
     {
         Debug.Log("Entering DashState");
-
-        // RB.velocity= new Vector2(transform.local.x*dashingpower, 0f);
+        if (stateMachine.BisaDash && !stateMachine.LagiDash)
+        {
+            stateMachine.StartCoroutine(Dashi());
+        }
     }
-
-    private void ControlDashVelocity()
-    {
-        // Terapkan kecepatan dash dalam arah yang ditentukan
-        float dashVelocityX = stateMachine.DashSpeed * stateMachine.FacingDirection.x;
-        stateMachine.RB2D.velocity = new Vector2(dashVelocityX, stateMachine.RB2D.velocity.y);
-    }
-
-
     public override void Exit()
     {
     }
 
-    public void SetGrounded(bool grounded)
+
+    private IEnumerator Dashi()
     {
-        isGrounded = grounded;
+        stateMachine.BisaDash = false;
+        stateMachine.LagiDash = true;
+        float origravi = stateMachine.RB2D.gravityScale;
+        stateMachine.RB2D.gravityScale = 0f;
+
+        // Tentukan arah dash berdasarkan facingRight
+        float dashDirection = stateMachine.facingRight ? 1f : -1f;
+
+        stateMachine.RB2D.velocity = new Vector2(dashDirection * stateMachine.DashPower, 0);
+        yield return new WaitForSeconds(stateMachine.DashTime);
+        stateMachine.RB2D.gravityScale = origravi;
+        stateMachine.LagiDash = false;
+        stateMachine.StartDashCooldown();
+        stateMachine.SwitchState(new PlayerLocoState(stateMachine));
     }
+
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerLocoState : PlayerBaseState
 {
-    
+
     public PlayerLocoState(PlayerStateMachine stateMachine) : base(stateMachine)
     {
     }
@@ -12,26 +12,23 @@ public class PlayerLocoState : PlayerBaseState
     public override void Enter()
     {
         stateMachine.InputReader.JumpEvent += OnJump;
-
     }
 
     public override void Tick(float deltaTime)
     {
-      
-
         Debug.Log("in Loco State");
         Vector2 movementInput = stateMachine.InputReader.MovementValue;
         MovePlayer(movementInput);
-
-        // Shrink player when moving
         if (stateMachine.IsMoving())
         {
-            ShrinkPlayer();
-            if(stateMachine.InputReader.Dashing)
+            if (stateMachine.InputReader.Dashing && stateMachine.BisaDash)
             {
                 stateMachine.SwitchState(new PlayerDashState(stateMachine));
             }
+            ShrinkPlayer();
+            stateMachine.FlipCharacter(movementInput.x);
         }
+
     }
 
     public override void Exit()
@@ -52,18 +49,10 @@ public class PlayerLocoState : PlayerBaseState
 
     private void ShrinkPlayer()
     {
-        // Calculate reduction amount based on reduction rate and time
+
         float reductionAmount = stateMachine.MaxReduction * stateMachine.ReductionRate * Time.deltaTime;
-
-        // Calculate new scale based on original scale and reduction amount
         Vector3 newScale = stateMachine.transform.localScale - stateMachine.OriginalScale * reductionAmount;
-
-        // Ensure new scale does not go below 0
         newScale = Vector3.Max(newScale, Vector3.zero);
-
-        // Apply new scale to player
         stateMachine.transform.localScale = newScale;
     }
-
-
 }
