@@ -468,6 +468,7 @@ GameObject:
   - component: {fileID: 765236611}
   - component: {fileID: 765236610}
   - component: {fileID: 765236609}
+  - component: {fileID: 765236612}
   m_Layer: 0
   m_Name: Square (4)
   m_TagString: Untagged
@@ -587,6 +588,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &765236612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765236607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d265cb88ac88544a8bad5423114fa02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recoveryConfig: {fileID: 11400000, guid: 91a641f7f9ca3e1449e327bba6fc1ca8, type: 2}
 --- !u!1 &1928899900
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,7 +959,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.19, y: -2.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 379793512}
   - {fileID: 297213474}

@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleType: 0
   isInstant: 0
-  scaleSpeed: 0.1
+  scaleSpeed: 0.2
+  instantScale: 0
