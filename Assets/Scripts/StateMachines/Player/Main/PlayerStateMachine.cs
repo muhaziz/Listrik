@@ -49,7 +49,7 @@ public class PlayerStateMachine : StateMachine
         BisaDash = true;
         LagiDash = false;
         DashCoolRun = false;
-        OriginalScale = transform.localScale; // Simpan skala asli pemain
+        OriginalScale = transform.localScale;
         SwitchState(new PlayerLocoState(this));
     }
 
@@ -89,6 +89,42 @@ public class PlayerStateMachine : StateMachine
             Vector3 newRotation = transform.eulerAngles;
             newRotation.y += flipRotationY; // Tambahkan rotasi flip
             transform.eulerAngles = newRotation;
+        }
+    }
+
+    public IEnumerator InstantRecoverScale(float recoverySpeed)
+    {
+        while (transform.localScale != OriginalScale)
+        {
+            transform.localScale = new Vector3(recoverySpeed, recoverySpeed, recoverySpeed);
+            yield return null;
+        }
+    }
+    public IEnumerator InstantNoRecoverScale(float NOCover)
+    {
+        while (transform.localScale != OriginalScale)
+        {
+            transform.localScale -= new Vector3(NOCover, NOCover, NOCover);
+            yield return null;
+        }
+    }
+
+    public IEnumerator SlowRecoverScale(float recoverySpeed)
+    {
+        while (transform.localScale != OriginalScale)
+        {
+            transform.localScale = Vector3.Lerp(transform.localScale, OriginalScale, recoverySpeed * Time.deltaTime);
+            yield return null;
+        }
+    }
+
+    public IEnumerator ReduceScale(Vector3 targetScale, float reductionSpeed)
+    {
+        while (transform.localScale != targetScale)
+        {
+            // Interpolasi pengurangan skala
+            transform.localScale = Vector3.Lerp(transform.localScale, targetScale, reductionSpeed * Time.deltaTime);
+            yield return null;
         }
     }
 
