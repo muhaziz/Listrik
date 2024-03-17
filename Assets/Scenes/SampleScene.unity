@@ -667,8 +667,8 @@ Transform:
   m_GameObject: {fileID: 1928899900}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.4459, y: -3.1365, z: 0}
-  m_LocalScale: {x: 1.535, y: 1.5560936, z: 1}
+  m_LocalPosition: {x: 5.0987, y: -3.4884, z: 0}
+  m_LocalScale: {x: 0.84071946, y: 0.85227245, z: 0.5477}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -923,8 +923,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.4093275, g: 0, b: 1, a: 1}
+  m_Sprite: {fileID: -1737752567, guid: 06ef75c509a997246b54d86e47d2986a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1010,18 +1010,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0081522465, y: -0.0027175546}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.875, y: 1.8125}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.9185023, y: 1.8206738}
   m_EdgeRadius: 0
 --- !u!114 &2147277046
 MonoBehaviour:
@@ -1038,9 +1038,9 @@ MonoBehaviour:
   <InputReader>k__BackingField: {fileID: 2147277047}
   <RB2D>k__BackingField: {fileID: 2147277044}
   <Animator>k__BackingField: {fileID: 0}
-  <MovementSpeed>k__BackingField: 2
+  <MovementSpeed>k__BackingField: 5
   <DashPower>k__BackingField: 24
-  <DashCooldown>k__BackingField: 5
+  <DashCooldown>k__BackingField: 1
   <DashTime>k__BackingField: 0.2
   BisaDash: 0
   LagiDash: 0
@@ -1051,7 +1051,7 @@ MonoBehaviour:
   <FallSpeed>k__BackingField: 2
   <MaxJumpTime>k__BackingField: 10
   <MaxReduction>k__BackingField: 0.5
-  <ReductionRate>k__BackingField: 0.3
+  <ReductionRate>k__BackingField: 0.15
   isground: 0
   groundLayer:
     serializedVersion: 2
