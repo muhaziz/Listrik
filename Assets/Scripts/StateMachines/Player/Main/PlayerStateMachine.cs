@@ -7,22 +7,22 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public InputReader InputReader { get; private set; }
     [field: SerializeField] public Rigidbody2D RB2D { get; private set; }
     [field: SerializeField] public Animator Animator { get; private set; }
+    [field: SerializeField] public ScaleRecoveryConfig scale { get; private set; }
+
 
     //!Movement
     [field: SerializeField] public float MovementSpeed { get; private set; }
-
-
     [field: SerializeField] public float DashPower { get; private set; }
     [field: SerializeField] public float DashCooldown { get; private set; }
     [field: SerializeField] public float DashTime { get; private set; }
-    [SerializeField] public bool BisaDash;
-    [SerializeField] public bool LagiDash;
-    [SerializeField] public bool DashCoolRun;
+
+    //!
+    [SerializeField] public bool BisaDash = true;
+    [SerializeField] public bool LagiDash = false;
+    [SerializeField] public bool DashCoolRun = false;
 
     [SerializeField] public bool facingRight = true;
     [SerializeField] private float flipRotationY = 180f;
-
-
 
 
     //! Jump System
@@ -31,7 +31,7 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public float MaxJumpTime { get; private set; }
 
 
-    //! Shrink System
+    // //! Shrink System
     public Vector3 OriginalScale { get; private set; }
     [field: SerializeField] public float MaxReduction { get; private set; }
     [field: SerializeField] public float ReductionRate { get; private set; }
@@ -46,9 +46,6 @@ public class PlayerStateMachine : StateMachine
 
     private void Start()
     {
-        BisaDash = true;
-        LagiDash = false;
-        DashCoolRun = false;
         OriginalScale = transform.localScale;
         SwitchState(new PlayerLocoState(this));
     }
@@ -59,7 +56,6 @@ public class PlayerStateMachine : StateMachine
         isground = true;
         return colliders.Length > 0;
     }
-
 
     public void StartDashCooldown()
     {
@@ -81,6 +77,7 @@ public class PlayerStateMachine : StateMachine
     {
         return Mathf.Abs(InputReader.MovementValue.x) > 0;
     }
+
     public void FlipCharacter(float moveInput)
     {
         if ((moveInput > 0 && !facingRight) || (moveInput < 0 && facingRight))
@@ -91,36 +88,5 @@ public class PlayerStateMachine : StateMachine
             transform.eulerAngles = newRotation;
         }
     }
-
-    public IEnumerator InstantRecoverScale(float recoverySpeed)
-    {
-        while (transform.localScale != OriginalScale)
-        {
-            transform.localScale = new Vector3(recoverySpeed, recoverySpeed, recoverySpeed);
-            yield return null;
-        }
-    }
-
-    public IEnumerator SlowRecoverScale(float recoverySpeed)
-    {
-        while (transform.localScale != OriginalScale)
-        {
-            transform.localScale = Vector3.Lerp(transform.localScale, OriginalScale, recoverySpeed * Time.deltaTime);
-            yield return null;
-        }
-    }
-
-    public IEnumerator ReduceScale(Vector3 targetScale, float reductionSpeed)
-    {
-        while (transform.localScale != targetScale)
-        {
-            // Kurangi skala secara langsung hingga mencapai skala target
-            transform.localScale -= (transform.localScale - targetScale) * reductionSpeed * Time.deltaTime;
-            yield return null;
-        }
-    }
-
-
-
 
 }

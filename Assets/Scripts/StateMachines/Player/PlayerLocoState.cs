@@ -21,6 +21,7 @@ public class PlayerLocoState : PlayerBaseState
         MovePlayer(movementInput);
         if (stateMachine.IsMoving())
         {
+            Debug.Log("Player is moving");
             if (stateMachine.InputReader.Dashing && stateMachine.BisaDash)
             {
                 stateMachine.SwitchState(new PlayerDashState(stateMachine));

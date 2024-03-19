@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleType: 2
   scaleSpeed: 0.1
+  target: {x: 0.2, y: 0.2, z: 0.2}

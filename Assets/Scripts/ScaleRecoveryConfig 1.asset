@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: ScaleRecoveryConfig 1
   m_EditorClassIdentifier: 
   scaleType: 0
-  isInstant: 0
-  scaleSpeed: 0.2
-  instantScale: 0
+  scaleSpeed: 0.4
+  target: {x: 0.4, y: 0.4, z: 0.4}

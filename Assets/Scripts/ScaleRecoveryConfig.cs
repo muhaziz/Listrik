@@ -7,6 +7,7 @@ public class ScaleRecoveryConfig : ScriptableObject
 
     public ScaleType scaleType;
     public float scaleSpeed = 0.1f;
+    public float instantScale = 0.1f;
     public Vector3 target;
 
 }
