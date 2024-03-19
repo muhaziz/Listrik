@@ -49,10 +49,11 @@ public class PlayerLocoState : PlayerBaseState
 
     private void ShrinkPlayer()
     {
-
         float reductionAmount = stateMachine.MaxReduction * stateMachine.ReductionRate * Time.deltaTime;
         Vector3 newScale = stateMachine.transform.localScale - stateMachine.OriginalScale * reductionAmount;
         newScale = Vector3.Max(newScale, Vector3.zero);
         stateMachine.transform.localScale = newScale;
     }
+
+
 }

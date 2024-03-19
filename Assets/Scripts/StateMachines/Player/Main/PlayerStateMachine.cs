@@ -100,14 +100,6 @@ public class PlayerStateMachine : StateMachine
             yield return null;
         }
     }
-    public IEnumerator InstantNoRecoverScale(float NOCover)
-    {
-        while (transform.localScale != OriginalScale)
-        {
-            transform.localScale -= new Vector3(NOCover, NOCover, NOCover);
-            yield return null;
-        }
-    }
 
     public IEnumerator SlowRecoverScale(float recoverySpeed)
     {
@@ -122,11 +114,13 @@ public class PlayerStateMachine : StateMachine
     {
         while (transform.localScale != targetScale)
         {
-            // Interpolasi pengurangan skala
-            transform.localScale = Vector3.Lerp(transform.localScale, targetScale, reductionSpeed * Time.deltaTime);
+            // Kurangi skala secara langsung hingga mencapai skala target
+            transform.localScale -= (transform.localScale - targetScale) * reductionSpeed * Time.deltaTime;
             yield return null;
         }
     }
+
+
 
 
 }
