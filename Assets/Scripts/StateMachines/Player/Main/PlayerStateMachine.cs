@@ -7,8 +7,6 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public InputReader InputReader { get; private set; }
     [field: SerializeField] public Rigidbody2D RB2D { get; private set; }
     [field: SerializeField] public Animator Animator { get; private set; }
-    [field: SerializeField] public ScaleRecoveryConfig scale { get; private set; }
-
 
     //!Movement
     [field: SerializeField] public float MovementSpeed { get; private set; }
@@ -29,6 +27,8 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public float JumpForce { get; private set; }
     [field: SerializeField] public float FallSpeed { get; private set; }
     [field: SerializeField] public float MaxJumpTime { get; private set; }
+
+    [field: SerializeField] public float HealProgress { get; private set; }
 
 
     // //! Shrink System
