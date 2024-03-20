@@ -18,6 +18,7 @@ public class PlayerStateMachine : StateMachine
     [SerializeField] public bool BisaDash = true;
     [SerializeField] public bool LagiDash = false;
     [SerializeField] public bool DashCoolRun = false;
+    [SerializeField] public bool LagiHeal = false;
 
     [SerializeField] public bool facingRight = true;
     [SerializeField] private float flipRotationY = 180f;
@@ -27,8 +28,6 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public float JumpForce { get; private set; }
     [field: SerializeField] public float FallSpeed { get; private set; }
     [field: SerializeField] public float MaxJumpTime { get; private set; }
-
-    [field: SerializeField] public float HealProgress { get; private set; }
 
 
     // //! Shrink System

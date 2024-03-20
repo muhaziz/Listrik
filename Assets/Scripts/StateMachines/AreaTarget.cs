@@ -9,20 +9,22 @@ public class TriggerArea : MonoBehaviour
             PlayerStateMachine player = other.GetComponent<PlayerStateMachine>();
             if (player != null)
             {
+                Debug.Log("In");
                 player.SwitchState(new PlayerHealState(player));
             }
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            PlayerStateMachine player = other.GetComponent<PlayerStateMachine>();
-            if (player != null)
-            {
-                player.SwitchState(new PlayerLocoState(player));
-            }
-        }
-    }
+    // private void OnTriggerExit2D(Collider2D other)
+    // {
+    //     if (other.CompareTag("Player"))
+    //     {
+    //         PlayerStateMachine player = other.GetComponent<PlayerStateMachine>();
+    //         if (player != null)
+    //         {
+    //             Debug.Log("exit`");
+    //             player.SwitchState(new PlayerLocoState(player));
+    //         }
+    //     }
+    // }
 }
