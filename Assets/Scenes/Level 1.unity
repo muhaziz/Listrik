@@ -368,6 +368,9 @@ GameObject:
   - component: {fileID: 811819213}
   - component: {fileID: 811819215}
   - component: {fileID: 811819214}
+  - component: {fileID: 811819217}
+  - component: {fileID: 811819216}
+  - component: {fileID: 811819218}
   m_Layer: 3
   m_Name: ground
   m_TagString: Untagged
@@ -1597,6 +1600,154 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!68 &811819216
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811819212}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 16.038742, y: -16.041351}
+  - {x: 16.04381, y: -18.033718}
+  - {x: 11.93649, y: -18.012661}
+  - {x: 11.951732, y: -16.94715}
+  - {x: 12.94575, y: -16.937643}
+  - {x: 12.961351, y: -15.95384}
+  - {x: 16.04737, y: -15.974448}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!68 &811819217
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811819212}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 1.0795944, y: -14.043939}
+  - {x: 18.88224, y: -14.0789}
+  - {x: 18.972622, y: -18.971678}
+  - {x: 17.975151, y: -18.97492}
+  - {x: 17.982748, y: -19.977367}
+  - {x: 16.957394, y: -19.981333}
+  - {x: 16.987862, y: -20.987812}
+  - {x: 15.972701, y: -20.982433}
+  - {x: 15.986913, y: -21.984024}
+  - {x: 13.969082, y: -21.974333}
+  - {x: 13.976902, y: -23.98184}
+  - {x: 8.018, y: -23.97117}
+  - {x: 8.019598, y: -21.97377}
+  - {x: 1.0097615, y: -21.974342}
+  - {x: 1.032584, y: -18.027426}
+  - {x: 9.039131, y: -18.027403}
+  - {x: 9.0106325, y: -16.926437}
+  - {x: 1.055129, y: -16.943226}
+  - {x: 1.0644579, y: -13.905923}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!68 &811819218
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811819212}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 10.990894, y: -22.019836}
+  - {x: 8.983783, y: -22.023924}
+  - {x: 8.970516, y: -20.978941}
+  - {x: 11.018427, y: -20.989334}
+  - {x: 11.021953, y: -22.065666}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &877572908
 GameObject:
   m_ObjectHideFlags: 0
