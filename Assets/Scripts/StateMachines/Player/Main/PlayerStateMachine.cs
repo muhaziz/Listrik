@@ -29,7 +29,7 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public float FallSpeed { get; private set; }
     [field: SerializeField] public float MaxJumpTime { get; private set; }
 
-    [field: SerializeField] public float heal { get; private set; }
+    // [field: SerializeField] public float heal { get; private set; }
     // //! Shrink System
     public Vector3 OriginalScale { get; private set; }
     [field: SerializeField] public float MaxReduction { get; private set; }

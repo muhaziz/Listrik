@@ -4,56 +4,57 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private bool isPaused = false;
+    public InputReader inputReader; // Referensi ke InputReader
+    private bool gameIsPaused = false;
 
-    // Metode ini dipanggil ketika tombol "Pause" ditekan
-    public void OnPause(InputAction.CallbackContext context)
+    private void Start()
     {
-        if (context.performed)
-        {
-            if (isPaused)
-                ResumeGame();
-            else
-                PauseGame();
-        }
+        // Menambahkan respons untuk event PauseEvent dari InputReader
+        //inputReader.PauseEvent += TogglePause;
+    }
+
+    private void OnDestroy()
+    {
+        // Menghapus respons event saat objek dihancurkan
+        //inputReader.PauseEvent -= TogglePause;
+    }
+
+    // Metode untuk menjeda atau melanjutkan permainan saat tombol Pause ditekan
+    void TogglePause()
+    {
+        if (gameIsPaused)
+            Resume();
+        else
+            Pause();
     }
 
     // Metode untuk menjeda permainan
-    private void PauseGame()
+    void Pause()
     {
-        Time.timeScale = 0f; // Memberhentikan waktu permainan
-
-        // Tambahkan kode untuk menampilkan menu pause di sini (misalnya: aktifkan UI pause menu)
-
-        isPaused = true;
+        Time.timeScale = 0f; // Memperlambat waktu menjadi 0
+        gameIsPaused = true;
+        // Tambahkan logika UI pause di sini (tampilkan panel pause, dll.)
     }
 
-    // Metode untuk melanjutkan permainan dari mode jeda
-    private void ResumeGame()
+    // Metode untuk melanjutkan permainan
+    void Resume()
     {
-        Time.timeScale = 1f; // Mengatur kembali waktu permainan ke kecepatan normal
-
-        // Tambahkan kode untuk menyembunyikan menu pause di sini (misalnya: nonaktifkan UI pause menu)
-
-        isPaused = false;
+        Time.timeScale = 1f; // Mengembalikan waktu ke kecepatan normal
+        gameIsPaused = false;
+        // Tambahkan logika UI resume di sini (sembunyikan panel pause, dll.)
     }
 
-    // Metode untuk me-restart level
-    public void RestartLevel()
+    // Metode untuk me-restart permainan
+    public void RestartGame()
     {
-        // Mendapatkan indeks dari level yang sedang dimuat
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-
-        // Me-restart level dengan indeks yang sama
-        SceneManager.LoadScene(currentSceneIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f; // Pastikan waktu kembali ke kecepatan normal setelah me-restart
     }
 
     // Metode untuk kembali ke menu utama
-    public void BackToMainMenu()
+    public void BackToMenu()
     {
-        // Kode tambahan jika perlu (misalnya: menyimpan data permainan)
-
-        // Kembali ke menu utama
         SceneManager.LoadScene("MainMenu"); // Ganti "MainMenu" dengan nama scene menu utama Anda
+        Time.timeScale = 1f; // Pastikan waktu kembali ke kecepatan normal saat kembali ke menu
     }
 }
