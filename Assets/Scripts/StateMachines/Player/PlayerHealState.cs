@@ -1,43 +1,38 @@
-using System;
-using System.Collections;
 using UnityEngine;
 
 public class PlayerHealState : PlayerBaseState
 {
-    private Vector3 originalScale; // Simpan skala asli pemain saat memasuki state
-    private float healDuration = 2f; // Durasi penyembuhan dalam detik
-    private float currentHealTime = 0f; // Waktu penyembuhan saat ini
+    private Vector3 originalScale;
+    private float healDuration = 2f;
+    private float currentHealTime = 0f;
+    private Vector3 startScale;
+    private float healingSpeed; // Kecepatan penyembuhan
+    private HealingSettings healingSettings;
 
-    public PlayerHealState(PlayerStateMachine stateMachine) : base(stateMachine)
+    public PlayerHealState(PlayerStateMachine stateMachine, HealingSettings settings) : base(stateMachine)
     {
+        healingSettings = settings;
     }
 
     public override void Enter()
     {
-        // Simpan skala asli pemain
         originalScale = stateMachine.OriginalScale;
-        // Reset waktu penyembuhan saat memasuki state
+        startScale = stateMachine.transform.localScale;
         currentHealTime = 0f;
-        // Kembalikan skala pemain ke nilai aslinya
-        stateMachine.transform.localScale = originalScale;
+        healingSpeed = healingSettings.healingSpeed; // Ambil kecepatan penyembuhan dari HealingSettings
     }
 
     public override void Tick(float deltaTime)
     {
-        Debug.Log("Entering heal State");
-        // Tambahkan waktu yang telah berlalu sejak masuk ke state
         currentHealTime += deltaTime;
-
-        // Hitung persentase seberapa jauh penyembuhan telah berlangsung
         float healProgress = Mathf.Clamp01(currentHealTime / healDuration);
+        Vector3 targetScale = Vector3.Lerp(startScale, originalScale, healProgress * healingSpeed);
 
-        float slowedHealProgress = Mathf.Pow(healProgress, 0.5f); // Perlahan proses penyembuhan dengan menggunakan akar kuadrat
-        Vector3 targetScale = Vector3.Lerp(Vector3.zero, originalScale, slowedHealProgress);
         stateMachine.transform.localScale = targetScale;
-
 
         Vector2 movementInput = stateMachine.InputReader.MovementValue;
         MovePlayer(movementInput);
+        stateMachine.FlipCharacter(movementInput.x);
     }
 
     public override void Exit()
@@ -50,5 +45,4 @@ public class PlayerHealState : PlayerBaseState
         Vector2 moveDirection = new Vector2(movementInput.x, 0f);
         stateMachine.RB2D.velocity = new Vector2(moveDirection.x * stateMachine.MovementSpeed * 0.5f, stateMachine.RB2D.velocity.y);
     }
-
 }
