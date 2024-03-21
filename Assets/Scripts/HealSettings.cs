@@ -4,4 +4,5 @@ using UnityEngine;
 public class HealingSettings : ScriptableObject
 {
     public float healingSpeed = 1f; // Kecepatan penyembuhan
+    //public Vector3 targetScale; // Skala target penyembuhan
 }

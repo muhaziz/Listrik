@@ -5,6 +5,7 @@ public class PlayerHealState : PlayerBaseState
     private Vector3 originalScale;
     private float healDuration = 2f;
     private float currentHealTime = 0f;
+    private float totalHealTime; // Waktu total yang diperlukan untuk mencapai skala asli
     private Vector3 startScale;
     private float healingSpeed; // Kecepatan penyembuhan
     private HealingSettings healingSettings;
@@ -20,13 +21,21 @@ public class PlayerHealState : PlayerBaseState
         startScale = stateMachine.transform.localScale;
         currentHealTime = 0f;
         healingSpeed = healingSettings.healingSpeed; // Ambil kecepatan penyembuhan dari HealingSettings
+
+        // Hitung waktu total yang diperlukan untuk mencapai skala asli
+        float distanceToFullScale = Vector3.Distance(startScale, originalScale);
+        totalHealTime = healDuration / Mathf.Max(healingSpeed, 0.01f); // Pastikan kecepatan penyembuhan minimal 0.01 untuk menghindari pembagian dengan nol
     }
 
     public override void Tick(float deltaTime)
     {
         currentHealTime += deltaTime;
-        float healProgress = Mathf.Clamp01(currentHealTime / healDuration);
-        Vector3 targetScale = Vector3.Lerp(startScale, originalScale, healProgress * healingSpeed);
+
+        // Hitung persentase seberapa jauh proses penyembuhan telah berlangsung
+        float healProgress = Mathf.Clamp01(currentHealTime / totalHealTime);
+
+        // Interpolasi linier antara skala awal dan skala asli berdasarkan persentase penyembuhan
+        Vector3 targetScale = Vector3.Lerp(startScale, originalScale, healProgress);
 
         stateMachine.transform.localScale = targetScale;
 

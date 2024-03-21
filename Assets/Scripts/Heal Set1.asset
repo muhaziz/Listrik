@@ -12,6 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1afe6b2924cc4b47bc68a3279a83d49, type: 3}
   m_Name: Heal Set1
   m_EditorClassIdentifier: 
-  normalHealingSpeed: 1
-  fastHealingSpeed: 2
-  slowHealingSpeed: 0.5
+  healingSpeed: 1
