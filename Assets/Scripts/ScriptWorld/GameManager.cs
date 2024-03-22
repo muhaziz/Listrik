@@ -10,13 +10,13 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         // Menambahkan respons untuk event PauseEvent dari InputReader
-        //inputReader.PauseEvent += TogglePause;
+        inputReader.PauseEvent += TogglePause;
     }
 
     private void OnDestroy()
     {
         // Menghapus respons event saat objek dihancurkan
-        //inputReader.PauseEvent -= TogglePause;
+        inputReader.PauseEvent -= TogglePause;
     }
 
     // Metode untuk menjeda atau melanjutkan permainan saat tombol Pause ditekan

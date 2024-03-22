@@ -10,6 +10,7 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     public event Action JumpEvent;
     public event Action DashEvent;
     public event Action ChangeEvent;
+    public event Action PauseEvent; // Tambahkan event PauseEvent
 
     public bool Dashing { get; private set; }
     public Vector2 MovementValue { get; private set; }
@@ -55,5 +56,13 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     public void OnChangestate(InputAction.CallbackContext context)
     {
 
+    }
+
+    public void OnPause(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            PauseEvent?.Invoke();
+        }
     }
 }
