@@ -1,23 +1,21 @@
 using UnityEngine;
+using UnityEngine.Video;
 using UnityEngine.SceneManagement;
-using System.Collections;
 
 public class SplashScreenController : MonoBehaviour
 {
-    public string nextSceneName; // Nama scene selanjutnya setelah splash screen
+    public VideoPlayer videoPlayer;
+    public string nextSceneName;
 
-    // Durasi tampilan splash screen (dalam detik)
-    public float splashScreenDuration = 5f;
-
-    private IEnumerator Start()
+    private void Start()
     {
-        yield return new WaitForSeconds(splashScreenDuration);
-        LoadNextScene();
+        videoPlayer.loopPointReached += OnVideoFinished;
+        videoPlayer.Play();
     }
 
-    // Method untuk memuat scene selanjutnya
-    private void LoadNextScene()
+    private void OnVideoFinished(VideoPlayer vp)
     {
+        // Pindah ke scene berikutnya
         SceneManager.LoadScene(nextSceneName);
     }
 }
