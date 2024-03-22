@@ -357,8 +357,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2935fa2912c732c429d2a9cfaa9277a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 1249971734}
   nextSceneName: Main Menu
-  splashScreenDuration: 8
 --- !u!4 &1790487294
 Transform:
   m_ObjectHideFlags: 0
