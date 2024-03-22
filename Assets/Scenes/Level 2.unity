@@ -480,6 +480,7 @@ MonoBehaviour:
   nextLevelAreaTag: NextLevelArea
   nextLevelName: Level 3
   objectToActivate: {fileID: 591472601}
+  delayBeforeLoading: 2
 --- !u!1 &158861052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,6 +1299,7 @@ GameObject:
   - component: {fileID: 679835302}
   - component: {fileID: 679835304}
   - component: {fileID: 679835305}
+  - component: {fileID: 679835306}
   m_Layer: 3
   m_Name: ground
   m_TagString: Untagged
@@ -3393,6 +3395,53 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!68 &679835306
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679835300}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 6.072727, y: -0.02895987}
+  - {x: 6.01425, y: -0.02895987}
+  - {x: 6.0242314, y: 2.00103}
+  - {x: 7.9992385, y: 1.9710677}
+  - {x: 8.033764, y: 1.0181582}
+  - {x: 8.997188, y: 1.0259731}
+  - {x: 9.019049, y: -0.0049835443}
+  - {x: 6.0335264, y: -0.028959863}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &720651971
 GameObject:
   m_ObjectHideFlags: 0
@@ -4062,7 +4111,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0b24c2f96465ea34d93af2e9609358f9, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -4082,7 +4131,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1174960091}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0b24c2f96465ea34d93af2e9609358f9, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

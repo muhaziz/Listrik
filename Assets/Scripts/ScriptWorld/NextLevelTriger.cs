@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class NextLevelTrigger : MonoBehaviour
 {
@@ -15,10 +16,12 @@ public class NextLevelTrigger : MonoBehaviour
     // Objek yang akan diaktifkan sebelum memuat level berikutnya
     public GameObject objectToActivate;
 
+    // Waktu penundaan sebelum memuat level berikutnya
+    public float delayBeforeLoading = 1f;
+
     // Ketika objek lain memasuki area trigger
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.CompareTag(playerTag))
         {
             if (objectToActivate != null)
@@ -26,9 +29,19 @@ public class NextLevelTrigger : MonoBehaviour
                 objectToActivate.SetActive(true);
             }
 
-            // Pindah ke level berikutnya
-            LoadNextLevel();
+            // Menjalankan coroutine untuk menunda memuat level berikutnya
+            StartCoroutine(LoadNextLevelWithDelay());
         }
+    }
+
+    // Coroutine untuk menunda memuat level berikutnya
+    IEnumerator LoadNextLevelWithDelay()
+    {
+        // Tunggu beberapa detik sebelum memuat level berikutnya
+        yield return new WaitForSeconds(delayBeforeLoading);
+
+        // Pindah ke level berikutnya
+        LoadNextLevel();
     }
 
     // Fungsi untuk memuat level berikutnya
