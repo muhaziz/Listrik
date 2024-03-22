@@ -26,8 +26,7 @@ public class PlayerStateMachine : StateMachine
 
     //! Jump System
     [field: SerializeField] public float JumpForce { get; private set; }
-    [field: SerializeField] public float FallSpeed { get; private set; }
-    [field: SerializeField] public float MaxJumpTime { get; private set; }
+
 
     // [field: SerializeField] public float heal { get; private set; }
     // //! Shrink System
@@ -52,7 +51,6 @@ public class PlayerStateMachine : StateMachine
     public bool IsGrounded()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheckPosition.position, groundCheckRadius, groundLayer);
-        isground = true;
         return colliders.Length > 0;
     }
 

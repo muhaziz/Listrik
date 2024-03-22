@@ -2,47 +2,45 @@ using UnityEngine;
 
 public class PlayerJumpState : PlayerBaseState
 {
-    private float jumpTimeElapsed = 0f;
-    float fallSpeed = 3f;
-
     public PlayerJumpState(PlayerStateMachine stateMachine) : base(stateMachine)
     {
     }
 
     public override void Enter()
     {
-        // Atur nilai awal waktu loncatan dan lakukan loncatan pertama.
-        jumpTimeElapsed = 0f;
-        Jump();
+
     }
 
     public override void Tick(float deltaTime)
     {
+        Jump(); // Memanggil Jump setelah memeriksa input gerakan
         Debug.Log("in Jump State");
-        // Tambah waktu loncatan yang telah berlalu.
-        jumpTimeElapsed += deltaTime;
-
-        // Cek apakah waktu loncatan telah melewati waktu maksimum atau pemain menyentuh tanah.
-        if (jumpTimeElapsed >= stateMachine.MaxJumpTime || !stateMachine.IsGrounded())
+        Vector2 movementInput = stateMachine.InputReader.MovementValue;
+        MovePlayer(movementInput);
+        if (stateMachine.InputReader.Dashing && stateMachine.BisaDash)
         {
-            // Jika ya, pindah ke state fall.
-            stateMachine.SwitchState(new PlayerFallState(stateMachine, fallSpeed));
+            stateMachine.SwitchState(new PlayerDashState(stateMachine));
         }
-        else
+        stateMachine.FlipCharacter(movementInput.x);
+        if (!stateMachine.IsGrounded())
         {
-            // Jika belum, lanjutkan loncatan.
-            Jump();
+            stateMachine.SwitchState(new PlayerFallState(stateMachine));
         }
     }
 
     public override void Exit()
     {
-        // Reset kondisi atau lakukan pembersihan jika diperlukan saat keluar dari state jump.
+    }
+
+    private void MovePlayer(Vector2 movementInput)
+    {
+        Vector2 moveDirection = new Vector2(movementInput.x, 0f);
+        stateMachine.RB2D.velocity = new Vector2(moveDirection.x * stateMachine.MovementSpeed, stateMachine.RB2D.velocity.y);
     }
 
     private void Jump()
     {
-        // Implementasi logika loncatan di sini.
+        // Menggunakan JumpForce untuk melompat
         stateMachine.RB2D.velocity = new Vector2(stateMachine.RB2D.velocity.x, stateMachine.JumpForce);
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public InputReader inputReader; // Referensi ke InputReader
+    public GameObject pausePanel; // Panel pause
     private bool gameIsPaused = false;
 
     private void Start()
@@ -33,7 +34,8 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0f; // Memperlambat waktu menjadi 0
         gameIsPaused = true;
-        // Tambahkan logika UI pause di sini (tampilkan panel pause, dll.)
+        // Aktifkan panel pause
+        pausePanel.SetActive(true);
     }
 
     // Metode untuk melanjutkan permainan
@@ -41,7 +43,8 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f; // Mengembalikan waktu ke kecepatan normal
         gameIsPaused = false;
-        // Tambahkan logika UI resume di sini (sembunyikan panel pause, dll.)
+        // Nonaktifkan panel pause
+        pausePanel.SetActive(false);
     }
 
     // Metode untuk me-restart permainan
@@ -54,7 +57,7 @@ public class GameManager : MonoBehaviour
     // Metode untuk kembali ke menu utama
     public void BackToMenu()
     {
-        SceneManager.LoadScene("MainMenu"); // Ganti "MainMenu" dengan nama scene menu utama Anda
+        SceneManager.LoadScene("Main Menu"); // Ganti "MainMenu" dengan nama scene menu utama Anda
         Time.timeScale = 1f; // Pastikan waktu kembali ke kecepatan normal saat kembali ke menu
     }
 }

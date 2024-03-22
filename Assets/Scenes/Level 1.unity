@@ -321,7 +321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4451025366885145314, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 110
+      value: 165
       objectReference: {fileID: 0}
     - target: {fileID: 4451025366885145314, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -329,7 +329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4451025366885145314, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -186.85501
+      value: -288.38318
       objectReference: {fileID: 0}
     - target: {fileID: 5412577702673837941, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
       propertyPath: m_AnchorMax.y
@@ -345,7 +345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5412577702673837941, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 110
+      value: 165
       objectReference: {fileID: 0}
     - target: {fileID: 5412577702673837941, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -353,7 +353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5412577702673837941, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -61.855003
+      value: -108.383194
       objectReference: {fileID: 0}
     - target: {fileID: 8995294099613536105, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
       propertyPath: m_Name
@@ -366,29 +366,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8995294099613536105, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 392323985}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
---- !u!1 &392323984 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8995294099613536105, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
-  m_PrefabInstance: {fileID: 202066131}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &392323985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 392323984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30400e4323a919e4d9ab66a35bb33663, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputReader: {fileID: 0}
 --- !u!1 &403419021
 GameObject:
   m_ObjectHideFlags: 0
@@ -2111,8 +2090,8 @@ GameObject:
   - component: {fileID: 1166396362}
   - component: {fileID: 1166396361}
   m_Layer: 0
-  m_Name: charactersprites_0
-  m_TagString: Untagged
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2305,12 +2284,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b97095aa78c9ee749acced8d3ed8c8ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 3
+  jumpingPower: 8
   rb: {fileID: 1166396363}
   groundCheck: {fileID: 477028638}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  tr: {fileID: 0}
+  tr: {fileID: 1166396361}
 --- !u!212 &1166396365
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2485,6 +2466,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1803309406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1803309407}
+  m_Layer: 0
+  m_Name: Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1803309407
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803309406}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1066.2086, y: 344.77362, z: -4.9142365}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1830399489
 GameObject:
   m_ObjectHideFlags: 0
@@ -2499,7 +2511,7 @@ GameObject:
   - component: {fileID: 1830399493}
   m_Layer: 0
   m_Name: pintu
-  m_TagString: Untagged
+  m_TagString: NextLevelArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2630,7 +2642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Player
   nextLevelAreaTag: NextLevelArea
-  nextLevelName: 
+  nextLevelName: Level 2
   objectToActivate: {fileID: 0}
 --- !u!1 &1913529495
 GameObject:
@@ -3135,6 +3147,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8143588045742905165, guid: ba4959ddd150ed7458ebf1ed1a500b65, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8143588045742905165, guid: ba4959ddd150ed7458ebf1ed1a500b65, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8237594358339552694, guid: ba4959ddd150ed7458ebf1ed1a500b65, type: 3}
       propertyPath: m_Name
       value: Tutorial PopUp
@@ -3155,3 +3175,4 @@ SceneRoots:
   - {fileID: 1830399492}
   - {fileID: 202066131}
   - {fileID: 1286846203302136215}
+  - {fileID: 1803309407}
