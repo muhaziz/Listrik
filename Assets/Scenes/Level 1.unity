@@ -388,6 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30400e4323a919e4d9ab66a35bb33663, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputReader: {fileID: 0}
 --- !u!1 &403419021
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,6 +585,7 @@ GameObject:
   - component: {fileID: 811819217}
   - component: {fileID: 811819216}
   - component: {fileID: 811819218}
+  - component: {fileID: 811819219}
   m_Layer: 3
   m_Name: ground
   m_TagString: Untagged
@@ -1149,16 +1151,6 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 2
       m_TileSpriteIndex: 2
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 9, y: -22, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1744,7 +1736,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 02267035a6d225c4f8805bd7a8cfa850, type: 2}
   - m_RefCount: 12
     m_Data: {fileID: 11400000, guid: 9d86b5fad89c931439985c00f80ce7f0, type: 2}
-  - m_RefCount: 3
+  - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 5ae6c5b8b0e9be74fb2cfdebb08e6618, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 69
@@ -1755,10 +1747,10 @@ Tilemap:
     m_Data: {fileID: -426116672, guid: 81378e17e1b718e46a024bfb0c15fb17, type: 3}
   - m_RefCount: 12
     m_Data: {fileID: 1983315218, guid: 79d37115a41a4ca4ba1c4e8062cabff9, type: 3}
-  - m_RefCount: 3
+  - m_RefCount: 2
     m_Data: {fileID: -1241655491, guid: 79d37115a41a4ca4ba1c4e8062cabff9, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 107
+  - m_RefCount: 106
     m_Data:
       e00: 1
       e01: 0
@@ -1777,7 +1769,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 107
+  - m_RefCount: 106
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -1838,13 +1830,15 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 16.038742, y: -16.041351}
+  - {x: 15.106637, y: -16.955872}
+  - {x: 16.05086, y: -16.911797}
   - {x: 16.04381, y: -18.033718}
   - {x: 11.93649, y: -18.012661}
   - {x: 11.951732, y: -16.94715}
   - {x: 12.94575, y: -16.937643}
   - {x: 12.961351, y: -15.95384}
-  - {x: 16.04737, y: -15.974448}
+  - {x: 15.069348, y: -15.967917}
+  - {x: 15.072046, y: -16.940271}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -1943,10 +1937,55 @@ EdgeCollider2D:
   m_EdgeRadius: 0
   m_Points:
   - {x: 10.990894, y: -22.019836}
-  - {x: 8.983783, y: -22.023924}
-  - {x: 8.970516, y: -20.978941}
+  - {x: 9.941182, y: -22.03962}
+  - {x: 9.918823, y: -21.498997}
+  - {x: 9.912221, y: -20.994637}
   - {x: 11.018427, y: -20.989334}
   - {x: 11.021953, y: -22.065666}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!68 &811819219
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811819212}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 13.039809, y: -21.014116}
+  - {x: 13.028349, y: -22.033775}
+  - {x: 11.958361, y: -22.039858}
+  - {x: 11.955103, y: -20.9729}
+  - {x: 13.037323, y: -20.961912}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
