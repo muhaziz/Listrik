@@ -1,10 +1,9 @@
 using System.Collections;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class PlayerLocoState : PlayerBaseState
 {
-
     public PlayerLocoState(PlayerStateMachine stateMachine) : base(stateMachine)
     {
     }
@@ -19,17 +18,21 @@ public class PlayerLocoState : PlayerBaseState
         Debug.Log("in Loco State");
         Vector2 movementInput = stateMachine.InputReader.MovementValue;
         MovePlayer(movementInput);
+        if (stateMachine.InputReader.Dashing && stateMachine.BisaDash)
+        {
+            stateMachine.SwitchState(new PlayerDashState(stateMachine));
+        }
         if (stateMachine.IsMoving())
         {
             Debug.Log("Player is moving");
-            if (stateMachine.InputReader.Dashing && stateMachine.BisaDash)
-            {
-                stateMachine.SwitchState(new PlayerDashState(stateMachine));
-            }
             ShrinkPlayer();
             stateMachine.FlipCharacter(movementInput.x);
-        }
 
+            if (stateMachine.transform.localScale == Vector3.zero)
+            {
+                RestartLevel();
+            }
+        }
     }
 
     public override void Exit()
@@ -56,5 +59,8 @@ public class PlayerLocoState : PlayerBaseState
         stateMachine.transform.localScale = newScale;
     }
 
-
+    private void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }
