@@ -12,6 +12,7 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public float MovementSpeed { get; private set; }
     [field: SerializeField] public float DashPower { get; private set; }
     [field: SerializeField] public float DashCooldown { get; private set; }
+    [field: SerializeField] public TrailRenderer tr { get; private set; }
     [field: SerializeField] public float DashTime { get; private set; }
 
     //!

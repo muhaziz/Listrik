@@ -36,9 +36,11 @@ public class PlayerDashState : PlayerBaseState
         float dashDirection = stateMachine.facingRight ? 1f : -1f;
 
         stateMachine.RB2D.velocity = new Vector2(dashDirection * stateMachine.DashPower, 0);
+        stateMachine.tr.emitting = true;
         yield return new WaitForSeconds(stateMachine.DashTime);
         stateMachine.RB2D.gravityScale = origravi;
         stateMachine.LagiDash = false;
+        stateMachine.tr.emitting = false;
         stateMachine.StartDashCooldown();
         stateMachine.SwitchState(new PlayerLocoState(stateMachine));
     }
