@@ -8,6 +8,7 @@ public class TutorialPopup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("tutor in");
             // Menampilkan popup tutorial
             popupUI.SetActive(true);
         }
@@ -17,7 +18,7 @@ public class TutorialPopup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Menyembunyikan popup tutorial saat pemain meninggalkan area trigger
+            Debug.Log("tutor out");
             popupUI.SetActive(false);
         }
     }
