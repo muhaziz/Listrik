@@ -15,6 +15,8 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public TrailRenderer tr { get; private set; }
     [field: SerializeField] public float DashTime { get; private set; }
 
+    [field: SerializeField] public bool IsPositive { get; private set; }
+
     //!
     [SerializeField] public bool BisaDash = true;
     [SerializeField] public bool LagiDash = false;

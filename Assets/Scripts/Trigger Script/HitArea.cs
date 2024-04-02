@@ -1,6 +1,8 @@
+
+using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerArea : MonoBehaviour
+public class HitArea : MonoBehaviour
 {
     public HealingSettings healingSettings;
 
@@ -12,7 +14,7 @@ public class TriggerArea : MonoBehaviour
             if (player != null)
             {
                 Debug.Log("In");
-                player.SwitchState(new PlayerHealState(player, healingSettings));
+                player.SwitchState(new PlayerHitState(player));
             }
         }
     }
@@ -25,8 +27,9 @@ public class TriggerArea : MonoBehaviour
             if (player != null)
             {
                 Debug.Log("exit`");
-                player.SwitchState(new PlayerLocoState(player));
+                player.SwitchState(new PlayerHitState(player));
             }
         }
     }
 }
+

@@ -22,7 +22,6 @@ public class PlayerHealState : PlayerBaseState
         currentHealTime = 0f;
         healingSpeed = healingSettings.healingSpeed; // Ambil kecepatan penyembuhan dari HealingSettings
 
-        // Hitung waktu total yang diperlukan untuk mencapai skala asli
         float distanceToFullScale = Vector3.Distance(startScale, originalScale);
         totalHealTime = healDuration / Mathf.Max(healingSpeed, 0.01f); // Pastikan kecepatan penyembuhan minimal 0.01 untuk menghindari pembagian dengan nol
     }
