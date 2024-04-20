@@ -11,6 +11,7 @@ public class PlayerLocoState : PlayerBaseState
     public override void Enter()
     {
         stateMachine.InputReader.JumpEvent += OnJump;
+        stateMachine.InputReader.ChangeEvent += OnChangeState;
     }
 
     public override void Tick(float deltaTime)
@@ -33,13 +34,18 @@ public class PlayerLocoState : PlayerBaseState
                 RestartLevel();
             }
         }
+
     }
 
     public override void Exit()
     {
         stateMachine.InputReader.JumpEvent -= OnJump;
+        stateMachine.InputReader.ChangeEvent += OnChangeState;
     }
-
+    private void OnChangeState()
+    {
+        stateMachine.IsNegative = !stateMachine.IsNegative; // Toggle nilai IsNegative
+    }
     private void OnJump()
     {
         stateMachine.SwitchState(new PlayerJumpState(stateMachine));

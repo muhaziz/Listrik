@@ -7,15 +7,14 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public InputReader InputReader { get; private set; }
     [field: SerializeField] public Rigidbody2D RB2D { get; private set; }
     [field: SerializeField] public Animator Animator { get; private set; }
-
+    [field: SerializeField] public TrailRenderer tr { get; private set; }
     //!Movement
     [field: SerializeField] public float MovementSpeed { get; private set; }
     [field: SerializeField] public float DashPower { get; private set; }
     [field: SerializeField] public float DashCooldown { get; private set; }
-    [field: SerializeField] public TrailRenderer tr { get; private set; }
     [field: SerializeField] public float DashTime { get; private set; }
 
-    [field: SerializeField] public bool IsPositive { get; private set; }
+    [field: SerializeField] public bool IsNegative = false;
 
     //!
     [SerializeField] public bool BisaDash = true;

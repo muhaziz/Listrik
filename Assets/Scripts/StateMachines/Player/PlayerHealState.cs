@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerHealState : PlayerBaseState
 {
     private Vector3 originalScale;
+    private Vector3 targetScale;
     private float healDuration = 2f;
     private float currentHealTime = 0f;
     private float totalHealTime; // Waktu total yang diperlukan untuk mencapai skala asli
@@ -20,10 +21,12 @@ public class PlayerHealState : PlayerBaseState
         originalScale = stateMachine.OriginalScale;
         startScale = stateMachine.transform.localScale;
         currentHealTime = 0f;
-        healingSpeed = healingSettings.healingSpeed; // Ambil kecepatan penyembuhan dari HealingSettings
+        healingSpeed = healingSettings.healingSpeed;
 
         float distanceToFullScale = Vector3.Distance(startScale, originalScale);
-        totalHealTime = healDuration / Mathf.Max(healingSpeed, 0.01f); // Pastikan kecepatan penyembuhan minimal 0.01 untuk menghindari pembagian dengan nol
+        totalHealTime = distanceToFullScale / Mathf.Max(healingSpeed, 0.01f);
+        // Menyesuaikan skala target dengan pengaturan
+        targetScale = healingSettings.targetScale;
     }
 
     public override void Tick(float deltaTime)
@@ -34,9 +37,9 @@ public class PlayerHealState : PlayerBaseState
         float healProgress = Mathf.Clamp01(currentHealTime / totalHealTime);
 
         // Interpolasi linier antara skala awal dan skala asli berdasarkan persentase penyembuhan
-        Vector3 targetScale = Vector3.Lerp(startScale, originalScale, healProgress);
+        Vector3 interpolatedScale = Vector3.Lerp(startScale, targetScale, healProgress);
 
-        stateMachine.transform.localScale = targetScale;
+        stateMachine.transform.localScale = interpolatedScale;
 
         Vector2 movementInput = stateMachine.InputReader.MovementValue;
         MovePlayer(movementInput);

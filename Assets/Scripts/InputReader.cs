@@ -13,6 +13,7 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     public event Action PauseEvent; // Tambahkan event PauseEvent
 
     public bool Dashing { get; private set; }
+    public bool Changing { get; private set; }
     public Vector2 MovementValue { get; private set; }
 
     private void Start()
@@ -55,7 +56,12 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
 
     public void OnChangestate(InputAction.CallbackContext context)
     {
-
+        if (context.performed)
+        {
+            Changing = !Changing; // Toggle nilai saat tombol ditekan
+            ChangeEvent?.Invoke(); // Panggil event ChangeEvent saat nilai berubah
+            Debug.Log("Changestate: " + Changing);
+        }
     }
 
     public void OnPause(InputAction.CallbackContext context)

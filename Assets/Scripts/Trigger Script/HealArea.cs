@@ -12,6 +12,7 @@ public class HealArea : MonoBehaviour
             if (player != null)
             {
                 Debug.Log("In");
+                // Berikan nilai HealingSettings ke state penyembuhan
                 player.SwitchState(new PlayerHealState(player, healingSettings));
             }
         }
