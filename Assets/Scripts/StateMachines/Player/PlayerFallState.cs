@@ -8,12 +8,12 @@ public class PlayerFallState : PlayerBaseState
 
     public override void Enter()
     {
-
+        stateMachine.InputReader.ChangeEvent += OnChangeState;
     }
 
     public override void Exit()
     {
-        // Bersihkan atau atur ulang sesuatu saat keluar dari state fall.
+        stateMachine.InputReader.ChangeEvent -= OnChangeState;
     }
 
     public override void Tick(float deltaTime)
@@ -30,6 +30,10 @@ public class PlayerFallState : PlayerBaseState
         {
             stateMachine.SwitchState(new PlayerLocoState(stateMachine));
         }
+    }
+    private void OnChangeState()
+    {
+        stateMachine.IsNegative = !stateMachine.IsNegative; // Toggle nilai IsNegative
     }
     private void MovePlayer(Vector2 movementInput)
     {
