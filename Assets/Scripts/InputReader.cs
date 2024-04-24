@@ -71,4 +71,9 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
             PauseEvent?.Invoke();
         }
     }
+
+    public void OnActivate(InputAction.CallbackContext context)
+    {
+
+    }
 }

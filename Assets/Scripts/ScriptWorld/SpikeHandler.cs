@@ -3,16 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class SpikeHandler : MonoBehaviour
 {
-    // Metode ini akan dipanggil ketika objek lain menyentuh objek ini
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Periksa apakah objek yang menyentuh adalah pemain
         if (collision.CompareTag("Player"))
         {
-            // Menghancurkan pemain
             Destroy(collision.gameObject);
 
-            // Restart level
             RestartLevel();
         }
     }

@@ -4,22 +4,13 @@ using System.Collections;
 
 public class NextLevelTrigger : MonoBehaviour
 {
-    // Nama tag untuk pemain
     public string playerTag = "Player";
-
-    // Nama tag untuk area pindah ke level berikutnya
     public string nextLevelAreaTag = "NextLevelArea";
-
-    // Nama level berikutnya dalam urutan build
     public string nextLevelName;
-
-    // Objek yang akan diaktifkan sebelum memuat level berikutnya
     public GameObject objectToActivate;
-
-    // Waktu penundaan sebelum memuat level berikutnya
+    public GameObject ResultMenu;
     public float delayBeforeLoading = 1f;
 
-    // Ketika objek lain memasuki area trigger
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag(playerTag))
@@ -28,23 +19,16 @@ public class NextLevelTrigger : MonoBehaviour
             {
                 objectToActivate.SetActive(true);
             }
-
-            // Menjalankan coroutine untuk menunda memuat level berikutnya
             StartCoroutine(LoadNextLevelWithDelay());
         }
     }
 
-    // Coroutine untuk menunda memuat level berikutnya
     IEnumerator LoadNextLevelWithDelay()
     {
-        // Tunggu beberapa detik sebelum memuat level berikutnya
         yield return new WaitForSeconds(delayBeforeLoading);
-
-        // Pindah ke level berikutnya
-        LoadNextLevel();
+        ResultMenu.gameObject.SetActive(true);
     }
 
-    // Fungsi untuk memuat level berikutnya
     private void LoadNextLevel()
     {
         // Jika nama level berikutnya tidak ditetapkan, pindah ke level berikutnya dalam urutan build
