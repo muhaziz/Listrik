@@ -55,15 +55,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Change state"",
-                    ""type"": ""Button"",
-                    ""id"": ""e4cdd807-89de-460c-bfae-618c4d9d88b2"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Pause"",
                     ""type"": ""Button"",
                     ""id"": ""3abfe54b-016d-4222-b08b-372c00e4e8c5"",
@@ -162,17 +153,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""2fd7e9f6-460f-44f6-8a3f-b561ad3d5a82"",
-                    ""path"": ""<Keyboard>/r"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard And Mouse"",
-                    ""action"": ""Change state"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""e3f713d6-33ee-4818-8e25-1d2eccdbac37"",
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
@@ -220,7 +200,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
-        m_Player_Changestate = m_Player.FindAction("Change state", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
         m_Player_Activate = m_Player.FindAction("Activate", throwIfNotFound: true);
     }
@@ -287,7 +266,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_Dash;
     private readonly InputAction m_Player_Jump;
-    private readonly InputAction m_Player_Changestate;
     private readonly InputAction m_Player_Pause;
     private readonly InputAction m_Player_Activate;
     public struct PlayerActions
@@ -297,7 +275,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @Dash => m_Wrapper.m_Player_Dash;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
-        public InputAction @Changestate => m_Wrapper.m_Player_Changestate;
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputAction @Activate => m_Wrapper.m_Player_Activate;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
@@ -318,9 +295,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
-            @Changestate.started += instance.OnChangestate;
-            @Changestate.performed += instance.OnChangestate;
-            @Changestate.canceled += instance.OnChangestate;
             @Pause.started += instance.OnPause;
             @Pause.performed += instance.OnPause;
             @Pause.canceled += instance.OnPause;
@@ -340,9 +314,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
-            @Changestate.started -= instance.OnChangestate;
-            @Changestate.performed -= instance.OnChangestate;
-            @Changestate.canceled -= instance.OnChangestate;
             @Pause.started -= instance.OnPause;
             @Pause.performed -= instance.OnPause;
             @Pause.canceled -= instance.OnPause;
@@ -380,7 +351,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
-        void OnChangestate(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnActivate(InputAction.CallbackContext context);
     }

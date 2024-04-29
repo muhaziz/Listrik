@@ -33,15 +33,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Change state",
-                    "type": "Button",
-                    "id": "e4cdd807-89de-460c-bfae-618c4d9d88b2",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Pause",
                     "type": "Button",
                     "id": "3abfe54b-016d-4222-b08b-372c00e4e8c5",
@@ -135,17 +126,6 @@
                     "processors": "",
                     "groups": "Keyboard And Mouse",
                     "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "2fd7e9f6-460f-44f6-8a3f-b561ad3d5a82",
-                    "path": "<Keyboard>/r",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard And Mouse",
-                    "action": "Change state",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
