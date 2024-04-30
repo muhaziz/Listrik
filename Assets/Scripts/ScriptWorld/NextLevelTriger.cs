@@ -1,14 +1,17 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using TMPro;
 
 public class NextLevelTrigger : MonoBehaviour
 {
     public string playerTag = "Player";
-    public string nextLevelAreaTag = "NextLevelArea";
-    public string nextLevelName;
     public GameObject objectToActivate;
     public GameObject ResultMenu;
+    public TMP_Text coinText;
+    public TMP_Text scaleText;
+    public float Bintang1 = .7f;
+    public float Bintang2 = .2f;
     public float delayBeforeLoading = 1f;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -19,6 +22,34 @@ public class NextLevelTrigger : MonoBehaviour
             {
                 objectToActivate.SetActive(true);
             }
+
+            // Dapatkan skala pemain
+            Vector3 playerScale = collision.transform.localScale;
+            // Ambil nilai minimum dari skala pemain
+            float minScale = Mathf.Min(playerScale.x, playerScale.y, playerScale.z);
+
+            // Tentukan jumlah koin berdasarkan rentang skala pemain
+            int coinCount = 0;
+            if (minScale > Bintang1)
+            {
+                coinCount = 3;
+            }
+            else if (minScale > Bintang2)
+            {
+                coinCount = 2;
+            }
+            else
+            {
+                coinCount = 1;
+            }
+
+            // Tampilkan jumlah koin dan skala terakhir pemain di TMP_Text
+            coinText.text = "Coins: " + coinCount.ToString();
+            scaleText.text = "Player Scale: " + minScale.ToString();
+
+            // Panggil metode SetStarsActive dari ResultMenu dan kirimkan nilai coinCount
+            ResultMenu.GetComponent<ResultMenu>().SetStarsActive(coinCount);
+
             StartCoroutine(LoadNextLevelWithDelay());
         }
     }
@@ -27,23 +58,5 @@ public class NextLevelTrigger : MonoBehaviour
     {
         yield return new WaitForSeconds(delayBeforeLoading);
         ResultMenu.gameObject.SetActive(true);
-    }
-
-    private void LoadNextLevel()
-    {
-        // Jika nama level berikutnya tidak ditetapkan, pindah ke level berikutnya dalam urutan build
-        if (string.IsNullOrEmpty(nextLevelName))
-        {
-            // Mendapatkan indeks level saat ini
-            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-
-            // Memuat level berikutnya dalam urutan build
-            SceneManager.LoadScene(currentSceneIndex + 1);
-        }
-        else
-        {
-            // Memuat level berdasarkan nama yang ditetapkan
-            SceneManager.LoadScene(nextLevelName);
-        }
     }
 }

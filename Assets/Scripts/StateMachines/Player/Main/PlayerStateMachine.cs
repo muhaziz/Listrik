@@ -25,6 +25,8 @@ public class PlayerStateMachine : StateMachine
     [SerializeField] public bool facingRight = true;
     [SerializeField] private float flipRotationY = 180f;
 
+    public GameObject GameOverUI;
+
 
     //! Jump System
     [field: SerializeField] public float JumpForce { get; private set; }

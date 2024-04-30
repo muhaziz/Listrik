@@ -6,10 +6,13 @@ public class MagneticObject : MonoBehaviour
     public Polarity polarity;
 
     [SerializeField] private float magneticForce = 10f;
+    [SerializeField] private float magneticRadius = 5f; // Radius area magnet
+
+    public float MagneticRadius => magneticRadius;
 
     private void FixedUpdate()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 5f); // Radius interaksi magnet
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, magneticRadius); // Menggunakan magneticRadius
 
         foreach (Collider2D collider in colliders)
         {
@@ -35,5 +38,12 @@ public class MagneticObject : MonoBehaviour
                 }
             }
         }
+    }
+
+    // Metode untuk menggambar area magnet dalam editor
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, magneticRadius);
     }
 }

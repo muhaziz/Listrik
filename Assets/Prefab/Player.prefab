@@ -219,17 +219,19 @@ MonoBehaviour:
   <InputReader>k__BackingField: {fileID: 8113734083107312473}
   <RB2D>k__BackingField: {fileID: 8940836382664991249}
   <Animator>k__BackingField: {fileID: 0}
+  <tr>k__BackingField: {fileID: 2005351727878985678}
   <MovementSpeed>k__BackingField: 5
   <DashPower>k__BackingField: 24
   <DashCooldown>k__BackingField: 1
-  <tr>k__BackingField: {fileID: 2005351727878985678}
   <DashTime>k__BackingField: 0.2
+  IsNegative: 0
   BisaDash: 1
   LagiDash: 0
   DashCoolRun: 0
   LagiHeal: 0
   facingRight: 1
   flipRotationY: 180
+  GameOverUI: {fileID: 0}
   <JumpForce>k__BackingField: 8
   <MaxReduction>k__BackingField: 0.5
   <ReductionRate>k__BackingField: 0.3

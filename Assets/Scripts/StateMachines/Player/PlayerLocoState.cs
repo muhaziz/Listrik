@@ -11,7 +11,6 @@ public class PlayerLocoState : PlayerBaseState
     public override void Enter()
     {
         stateMachine.InputReader.JumpEvent += OnJump;
-        //stateMachine.InputReader.ChangeEvent += OnChangeState;
     }
 
     public override void Tick(float deltaTime)
@@ -31,7 +30,7 @@ public class PlayerLocoState : PlayerBaseState
 
             if (stateMachine.transform.localScale == Vector3.zero)
             {
-                RestartLevel();
+                GameOverUi();
             }
         }
 
@@ -39,18 +38,12 @@ public class PlayerLocoState : PlayerBaseState
 
     public override void Exit()
     {
-        // stateMachine.InputReader.ChangeEvent -= OnChangeState;
         stateMachine.InputReader.JumpEvent -= OnJump;
-
     }
     private void OnJump()
     {
         stateMachine.SwitchState(new PlayerJumpState(stateMachine));
     }
-    // private void OnChangeState()
-    // {
-    //     stateMachine.IsNegative = !stateMachine.IsNegative; // Toggle nilai IsNegative
-    // }
 
 
     private void MovePlayer(Vector2 movementInput)
@@ -71,7 +64,10 @@ public class PlayerLocoState : PlayerBaseState
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
+    private void GameOverUi()
+    {
+        stateMachine.GameOverUI.SetActive(true);
+    }
     private void GameOver()
     {
         Time.timeScale = 0;
