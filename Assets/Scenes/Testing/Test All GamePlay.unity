@@ -2595,7 +2595,7 @@ Transform:
   m_GameObject: {fileID: 1329305038}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.31, y: -0.06, z: 0.21415484}
+  m_LocalPosition: {x: -4.31, y: 0.51, z: 0.21415484}
   m_LocalScale: {x: 0.5342, y: 3.0618618, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2659,8 +2659,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   polarity: 0
-  magneticForce: 10
-  magneticRadius: 3.34
+  magneticForce: 2.13
+  magneticRadius: 6.05
 --- !u!212 &1329305042
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2974,7 +2974,7 @@ Transform:
   m_GameObject: {fileID: 1382951950}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: -1.91, z: 0}
+  m_LocalPosition: {x: -2.76, y: -4.21, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []

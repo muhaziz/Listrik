@@ -28,6 +28,9 @@ public class NextLevelTrigger : MonoBehaviour
             // Ambil nilai minimum dari skala pemain
             float minScale = Mathf.Min(playerScale.x, playerScale.y, playerScale.z);
 
+            // Ubah nilai skala pemain menjadi format persen dalam teks
+            float scaledPercentage = minScale * 100f;
+
             // Tentukan jumlah koin berdasarkan rentang skala pemain
             int coinCount = 0;
             if (minScale > Bintang1)
@@ -45,7 +48,7 @@ public class NextLevelTrigger : MonoBehaviour
 
             // Tampilkan jumlah koin dan skala terakhir pemain di TMP_Text
             coinText.text = "Coins: " + coinCount.ToString();
-            scaleText.text = "Player Scale: " + minScale.ToString();
+            scaleText.text = "Player Scale: " + scaledPercentage.ToString("F0") + "%"; // Menambahkan format persen ke teks
 
             // Panggil metode SetStarsActive dari ResultMenu dan kirimkan nilai coinCount
             ResultMenu.GetComponent<ResultMenu>().SetStarsActive(coinCount);
@@ -58,5 +61,16 @@ public class NextLevelTrigger : MonoBehaviour
     {
         yield return new WaitForSeconds(delayBeforeLoading);
         ResultMenu.gameObject.SetActive(true);
+    }
+
+    void UnlockedLevel()
+    {
+        if (SceneManager.GetActiveScene().buildIndex >= PlayerPrefs.GetInt("ReachedIndex"))
+        {
+            PlayerPrefs.SetInt("ReachedIndex", SceneManager.GetActiveScene().buildIndex + 1);
+            PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("unlockedLevel", 1) + 1);
+            PlayerPrefs.Save();
+        }
+
     }
 }
