@@ -18,6 +18,7 @@ public class NextLevelTrigger : MonoBehaviour
     {
         if (collision.CompareTag(playerTag))
         {
+            UnlockedLevel();
             if (objectToActivate != null)
             {
                 objectToActivate.SetActive(true);
