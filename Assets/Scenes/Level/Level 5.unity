@@ -2700,8 +2700,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'berhenti di <color=yellow><b>Charging Station</b></color> untuk <color=yellow><b>memulihkan</b></color>
-    kondisimu!
+  m_text: 'Hati - hati terhadapa <color=red><b>Voltormento</b></color> dia dapat
+    <color=yellow><b>menyerap</b></color> dayamu!
 
 '
   m_isRightToLeft: 0
