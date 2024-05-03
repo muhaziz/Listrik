@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using UnityEngine.Events;
+using TMPro;
 
 public class LinearProgressionAuthApacheLeaderboard : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class LinearProgressionAuthApacheLeaderboard : MonoBehaviour
 
     [Header("Register Settings")]
     public InputField Username;
-    public InputField Score;
+    public TMP_Text Score;
 
     [Header("Field Settings")]
     public string FieldUsername = "name";
