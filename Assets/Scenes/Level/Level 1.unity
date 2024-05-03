@@ -262,6 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f15b9ddded32404ca53936bbb299400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameOver: {fileID: 0}
 --- !u!61 &96489048
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4403,7 +4404,7 @@ MonoBehaviour:
   objectToActivate: {fileID: 1985390537}
   ResultMenu: {fileID: 2756284334238581342}
   coinText: {fileID: 6931730886089790776}
-  scaleText: {fileID: 0}
+  scaleText: {fileID: 302340116}
   Bintang1: 0.7
   Bintang2: 0.2
   delayBeforeLoading: 1
