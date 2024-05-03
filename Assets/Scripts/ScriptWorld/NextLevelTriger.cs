@@ -11,7 +11,7 @@ public class NextLevelTrigger : MonoBehaviour
     public GameObject objectToActivate;
     public GameObject ResultMenu;
     public TMP_Text coinText;
-    public Text scaleText;
+    public TMP_Text scaleText;
     public float Bintang1 = .7f;
     public float Bintang2 = .2f;
     public float delayBeforeLoading = 1f;
