@@ -4626,6 +4626,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2434118247526528407, guid: f9b3d053b63f1f6418fe0e9535ed7e26, type: 3}
+      propertyPath: m_text
+      value: 'Selamat datang di <color=yellow><b>Voltopia, </b></color>!dunia yang
+        dipenuhi dengan arus listrik yang mempesona! <color=yellow><b>Bergabunglah
+        dengan Slimey untuk menjelajahi petualangan melalui medan yang terang benderang.
+        </b></color>Gunakan tombol  <color=yellow><b>WASD</b></color> untuk menggerakkan
+        dirimu maju, mundur, ke kiri, dan ke kanan dalam aliran energi yang dinamis.
+        Tidak hanya itu, kamu juga bisa menggunakan tombol<color=yellow><b>SHIFT</b></color>
+        untuk melakukan dash dan meluncur melewati medan listrik dengan cepat. Ayo,
+        mari kita mulai petualangan elektrik ini! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2434118247526528407, guid: f9b3d053b63f1f6418fe0e9535ed7e26, type: 3}
+      propertyPath: m_fontSize
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2434118247526528407, guid: f9b3d053b63f1f6418fe0e9535ed7e26, type: 3}
+      propertyPath: m_margin.w
+      value: 0.30290985
+      objectReference: {fileID: 0}
+    - target: {fileID: 2434118247526528407, guid: f9b3d053b63f1f6418fe0e9535ed7e26, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939384695692314231, guid: f9b3d053b63f1f6418fe0e9535ed7e26, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 9.452
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939384695692314231, guid: f9b3d053b63f1f6418fe0e9535ed7e26, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1.3547
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939384695692314231, guid: f9b3d053b63f1f6418fe0e9535ed7e26, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.00000044703
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939384695692314231, guid: f9b3d053b63f1f6418fe0e9535ed7e26, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 7002781052291861114, guid: f9b3d053b63f1f6418fe0e9535ed7e26, type: 3}
       propertyPath: m_Camera
       value: 
@@ -4633,6 +4672,10 @@ PrefabInstance:
     - target: {fileID: 8398792839434306833, guid: f9b3d053b63f1f6418fe0e9535ed7e26, type: 3}
       propertyPath: m_Name
       value: tutor
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398792839434306833, guid: f9b3d053b63f1f6418fe0e9535ed7e26, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

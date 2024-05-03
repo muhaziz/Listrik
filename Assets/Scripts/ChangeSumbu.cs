@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class ChangeSumbu : MonoBehaviour
@@ -6,11 +5,18 @@ public class ChangeSumbu : MonoBehaviour
     public enum Polarity { Positive, Negative }
     public Polarity polarity;
     public PlayerStateMachine PSM;
-    private Renderer playerRenderer; // Referensi ke komponen Renderer untuk mengubah warna pemain
+    private SpriteRenderer playerSpriteRenderer; // Referensi ke komponen SpriteRenderer untuk mengubah warna pemain
 
     private void Start()
     {
-        playerRenderer = PSM.GetComponent<Renderer>(); // Mendapatkan komponen Renderer dari pemain
+        // Mencari komponen SpriteRenderer pada root object pemain
+        playerSpriteRenderer = PSM.transform.root.GetComponentInChildren<SpriteRenderer>();
+
+        // Jika sprite renderer tidak ditemukan, coba mencarinya pada pemain itu sendiri
+        if (playerSpriteRenderer == null)
+        {
+            playerSpriteRenderer = PSM.GetComponent<SpriteRenderer>();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -21,8 +27,6 @@ public class ChangeSumbu : MonoBehaviour
             {
                 PSM.IsNegative = false;
                 ChangePlayerColor(Color.red); // Mengubah warna pemain menjadi merah
-                // ChangePlayerColor(new Color(0f, 0f, 1f, 1f)); // Warna biru murni dengan alpha maksimum (tidak transparan)
-
             }
             else if (polarity == Polarity.Negative)
             {
@@ -35,9 +39,9 @@ public class ChangeSumbu : MonoBehaviour
     // Method untuk mengubah warna pemain
     private void ChangePlayerColor(Color color)
     {
-        if (playerRenderer != null)
+        if (playerSpriteRenderer != null)
         {
-            playerRenderer.material.color = color; // Mengubah warna pemain sesuai dengan parameter color
+            playerSpriteRenderer.color = color; // Mengubah warna pemain sesuai dengan parameter color
         }
     }
 }
