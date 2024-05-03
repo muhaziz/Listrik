@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 7237415745604316571}
   - component: {fileID: 3333870282539162696}
   - component: {fileID: 6509890546945266834}
+  - component: {fileID: 8602866469021831760}
   m_Layer: 0
   m_Name: magnet-positif
   m_TagString: Untagged
@@ -213,3 +214,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.11835, y: 1.10659}
   m_EdgeRadius: 0
+--- !u!114 &8602866469021831760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3714819821670899062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4e5b277af4c394799ad511bf33d1d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  polarity: 0
+  magneticForce: 40
+  magneticRadius: 6.78
