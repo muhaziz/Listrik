@@ -21,6 +21,8 @@ public class ChangeSumbu : MonoBehaviour
             {
                 PSM.IsNegative = false;
                 ChangePlayerColor(Color.red); // Mengubah warna pemain menjadi merah
+                // ChangePlayerColor(new Color(0f, 0f, 1f, 1f)); // Warna biru murni dengan alpha maksimum (tidak transparan)
+
             }
             else if (polarity == Polarity.Negative)
             {
