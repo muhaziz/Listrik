@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1afe6b2924cc4b47bc68a3279a83d49, type: 3}
   m_Name: Heal Set1 1
   m_EditorClassIdentifier: 
-  targetScale: {x: 0.3, y: 0.3, z: 0.3}
+  targetScale: {x: 0.4, y: 0.4, z: 0.4}
   healingSpeed: 0.5

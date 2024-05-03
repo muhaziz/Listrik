@@ -3830,8 +3830,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'berhenti di <color=yellow><b>Charging Station</b></color> untuk <color=yellow><b>memulihkan</b></color>
-    kondisimu!
+  m_text: 'harap perhatikan <color=yellow><b>magnet yang tersedia</b></color> untuk
+    <color=yellow><b>membantu</b></color> perjalananmu
 
 '
   m_isRightToLeft: 0
