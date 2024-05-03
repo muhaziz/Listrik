@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.1875, y: -0.0013313}
-  m_SizeDelta: {x: 226.5821, y: 96.765}
+  m_AnchoredPosition: {x: 0.0048, y: 0.134}
+  m_SizeDelta: {x: 9.8271, y: 2.9557}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3712400264887242979
 CanvasRenderer:
@@ -65,8 +65,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "kamu harus mulai bergegas sebelum energi disekitar menyerap energimu dan
-    membuatmu mengecil, berhati\_-\_hatilah!"
+  m_text: 'Selamat datang di <color=yellow><b>Voltopia</b></color>! mari jelajahi
+    dunia elektrik ini bersama dengan <color=yellow><b>Slimey</b></color>. Untuk
+    menggerakkan <color=yellow><b>Slimey</b></color> ke depan, belakang, kiri, dan
+    kanan. Kamu dapat menggunakan tombol <color=yellow><b>WASD</b></color> kemudian
+    kamu dapat menggunakan <color=yellow><b>SHIFT</b></color> untuk melakukan dash.
+    Ayo mulai!
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -93,8 +99,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 9.6
-  m_fontSizeBase: 9.6
+  m_fontSize: 0.35
+  m_fontSizeBase: 0.35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -170,8 +176,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -352.8, y: -185.4}
-  m_SizeDelta: {x: 252.3611, y: 96.7627}
+  m_AnchoredPosition: {x: -949.24, y: -558.4986}
+  m_SizeDelta: {x: 10.7871, y: 3.5957}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2432125579396094308
 CanvasRenderer:
@@ -229,7 +235,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1403498988592451537
 RectTransform:
   m_ObjectHideFlags: 0
@@ -239,7 +245,7 @@ RectTransform:
   m_GameObject: {fileID: 8398792839434306833}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7873654887847949898}
@@ -259,7 +265,7 @@ Canvas:
   m_GameObject: {fileID: 8398792839434306833}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 2
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -271,7 +277,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &567142608230412511
 MonoBehaviour:
@@ -295,7 +301,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &1312013094890262099
 MonoBehaviour:
   m_ObjectHideFlags: 0
