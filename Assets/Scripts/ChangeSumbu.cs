@@ -26,12 +26,12 @@ public class ChangeSumbu : MonoBehaviour
             if (polarity == Polarity.Positive)
             {
                 PSM.IsNegative = false;
-                ChangePlayerColor(Color.red); // Mengubah warna pemain menjadi merah
+                ChangePlayerColor(new Color(0.949f, 0.243f, 0.243f, 1f)); // Mengubah warna pemain menjadi merah dengan menggunakan nilai HEX code F23E3
             }
             else if (polarity == Polarity.Negative)
             {
                 PSM.IsNegative = true;
-                ChangePlayerColor(Color.blue); // Mengubah warna pemain menjadi biru
+                ChangePlayerColor(new Color(0.105f, 0.518f, 1f, 1f)); // Mengubah warna pemain menjadi biru dengan menggunakan nilai HEX code 1B84FF
             }
         }
     }

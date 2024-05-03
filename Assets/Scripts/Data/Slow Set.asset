@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d1afe6b2924cc4b47bc68a3279a83d49, type: 3}
-  m_Name: Heal Set1 1
+  m_Name: Slow Set
   m_EditorClassIdentifier: 
   targetScale: {x: 0.4, y: 0.4, z: 0.4}
-  healingSpeed: 0.5
+  healingSpeed: 0.2

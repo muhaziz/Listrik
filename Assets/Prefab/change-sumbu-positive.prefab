@@ -48,7 +48,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0, g: 0.8828316, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.14740658, a: 1}
   m_Intensity: 4.81
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 929285913226560074}
   - component: {fileID: 7779618035798350977}
   m_Layer: 0
-  m_Name: change-sumbu
+  m_Name: change-sumbu-positive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,8 +181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b0af979d4d46b44eba0c79e632096ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  polarity: 1
-  PSM: {fileID: 0}
+  polarity: 0
+  PSM: {fileID: 7096544835537404592, guid: b47eb0533b6c2f2448bda53e72e344d6, type: 3}
 --- !u!61 &7779618035798350977
 BoxCollider2D:
   m_ObjectHideFlags: 0

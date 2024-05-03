@@ -20,7 +20,7 @@ public class NextLevelTrigger : MonoBehaviour
     {
         if (collision.CompareTag(playerTag))
         {
-            leaderboard.InvokeLeaderboard();
+
             UnlockedLevel();
             if (objectToActivate != null)
             {
@@ -53,7 +53,7 @@ public class NextLevelTrigger : MonoBehaviour
             // Tampilkan jumlah koin dan skala terakhir pemain di TMP_Text
             coinText.text = "Coins: " + coinCount.ToString();
             scaleText.text = scaledPercentage.ToString("F0"); // Menambahkan format persen ke teks
-
+            leaderboard.InvokeLeaderboard();
             // Panggil metode SetStarsActive dari ResultMenu dan kirimkan nilai coinCount
             ResultMenu.GetComponent<ResultMenu>().SetStarsActive(coinCount);
 
