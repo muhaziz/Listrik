@@ -1219,8 +1219,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2434118247526528407, guid: f9b3d053b63f1f6418fe0e9535ed7e26, type: 3}
       propertyPath: m_text
-      value: 'kamu harus mulai bergegas sebelum <color=yellow><b>Energimu</b></color>
-        habis dan membuatmu <color=yellow><b>mengecil</b></color>, <color=yellow><b>berhati-hatilah</b></color>!
+      value: 'Kamu harus segera bergerak sebelum energimu<color=yellow><b> habis
+        dan membuatmu<color=yellow><b>terhenti di tengah jalan! Tetap waspada terhadap
+        risiko kehabisan daya dan pastikan untuk mengelola sumber daya listrik dengan
+        bijaksana saat menjelajahi dunia ini.
 
 '
       objectReference: {fileID: 0}
@@ -1230,7 +1232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8398792839434306833, guid: f9b3d053b63f1f6418fe0e9535ed7e26, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
