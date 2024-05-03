@@ -1072,17 +1072,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f15b9ddded32404ca53936bbb299400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &379438395 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6844746664215280260, guid: 941d67b7d4014224a96be79e83bae477, type: 3}
-  m_PrefabInstance: {fileID: 926383890}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &400192894 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4163167463770398173, guid: 941d67b7d4014224a96be79e83bae477, type: 3}
@@ -1314,11 +1303,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1c1d503e04cc9a4980910b54edf9799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leaderboard: {fileID: 0}
   playerTag: Player
   objectToActivate: {fileID: 920267102}
   ResultMenu: {fileID: 54845994}
   coinText: {fileID: 1483513963}
-  scaleText: {fileID: 379438395}
+  scaleText: {fileID: 0}
   Bintang1: 0.7
   Bintang2: 0.2
   delayBeforeLoading: 1
@@ -2239,6 +2229,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 941d67b7d4014224a96be79e83bae477, type: 3}
+--- !u!114 &926383891 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7679196968991378790, guid: 941d67b7d4014224a96be79e83bae477, type: 3}
+  m_PrefabInstance: {fileID: 926383890}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &928144383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3199,7 +3200,7 @@ PrefabInstance:
     - target: {fileID: 4085407521247127685, guid: 8e878ddfb4aca8442b53d04c25f095ea, type: 3}
       propertyPath: Score
       value: 
-      objectReference: {fileID: 1430284180}
+      objectReference: {fileID: 926383891}
     - target: {fileID: 4085407521247127685, guid: 8e878ddfb4aca8442b53d04c25f095ea, type: 3}
       propertyPath: Username
       value: 
