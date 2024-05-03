@@ -1124,7 +1124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d752f3b936b855468ffd618829e9aa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healingSettings: {fileID: 11400000, guid: f611f288e8576db4084379d7a28cfb37, type: 2}
+  healingSettings: {fileID: 11400000, guid: f45a8bb1e6a91d34097680eafa5db1bf, type: 2}
 --- !u!61 &537263056
 BoxCollider2D:
   m_ObjectHideFlags: 0
