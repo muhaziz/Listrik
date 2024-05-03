@@ -3807,8 +3807,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0041, y: 0.070674}
-  m_SizeDelta: {x: 4.7205, y: 1.8327}
+  m_AnchoredPosition: {x: 0.12, y: 0.000000014901}
+  m_SizeDelta: {x: 4.5727, y: 1.7177}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1644549807
 MonoBehaviour:
@@ -3831,7 +3831,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'harap perhatikan <color=yellow><b>magnet yang tersedia</b></color> untuk
-    <color=yellow><b>membantu</b></color> perjalananmu
+    <color=yellow><b>membantu</b></color> perjalananmu, kamu dapat merubah sumbu
+    <color=red><b>positif </b></color>ke sumbu<color=blue><b> negatif<color=yellow><b>
 
 '
   m_isRightToLeft: 0
@@ -3860,8 +3861,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.3
-  m_fontSizeBase: 0.3
+  m_fontSize: 0.2
+  m_fontSizeBase: 0.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
