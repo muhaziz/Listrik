@@ -3,14 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class SpikeHandler : MonoBehaviour
 {
-
+    public GameObject GameOver;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             Destroy(collision.gameObject);
-
-            RestartLevel();
+            Time.timeScale = 0;
+            GameOver.SetActive(true);
         }
     }
 
