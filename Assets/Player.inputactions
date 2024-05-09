@@ -135,7 +135,7 @@
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard And Mouse",
                     "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
