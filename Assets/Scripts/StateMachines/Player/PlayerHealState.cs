@@ -43,6 +43,10 @@ public class PlayerHealState : PlayerBaseState
 
         Vector2 movementInput = stateMachine.InputReader.MovementValue;
         MovePlayer(movementInput);
+        if (stateMachine.InputReader.Dashing && stateMachine.BisaDash)
+        {
+            stateMachine.SwitchState(new PlayerDashState(stateMachine));
+        }
         stateMachine.FlipCharacter(movementInput.x);
     }
 
@@ -54,6 +58,6 @@ public class PlayerHealState : PlayerBaseState
     private void MovePlayer(Vector2 movementInput)
     {
         Vector2 moveDirection = new Vector2(movementInput.x, 0f);
-        stateMachine.RB2D.velocity = new Vector2(moveDirection.x * stateMachine.MovementSpeed * 0.5f, stateMachine.RB2D.velocity.y);
+        stateMachine.RB2D.velocity = new Vector2(moveDirection.x * stateMachine.MovementSpeed, stateMachine.RB2D.velocity.y);
     }
 }
