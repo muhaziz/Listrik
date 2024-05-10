@@ -12,6 +12,9 @@ public class NextLevelTrigger : MonoBehaviour
     public GameObject ResultMenu;
     public TMP_Text coinText;
     public TMP_Text scaleText;
+    public AudioClip soundEffect;
+    public AudioSource externalAudioSource;
+    public GameObject Music;
     public float Bintang1 = .7f;
     public float Bintang2 = .2f;
     public float delayBeforeLoading = 1f;
@@ -22,20 +25,16 @@ public class NextLevelTrigger : MonoBehaviour
         {
 
             UnlockedLevel();
+            Music.SetActive(false);
+            PlaySoundEffect();
+
             if (objectToActivate != null)
             {
                 objectToActivate.SetActive(true);
             }
-
-            // Dapatkan skala pemain
             Vector3 playerScale = collision.transform.localScale;
-            // Ambil nilai minimum dari skala pemain
             float minScale = Mathf.Min(playerScale.x, playerScale.y, playerScale.z);
-
-            // Ubah nilai skala pemain menjadi format persen dalam teks
             float scaledPercentage = minScale * 100f;
-
-            // Tentukan jumlah koin berdasarkan rentang skala pemain
             int coinCount = 0;
             if (minScale > Bintang1)
             {
@@ -50,13 +49,10 @@ public class NextLevelTrigger : MonoBehaviour
                 coinCount = 1;
             }
 
-            // Tampilkan jumlah koin dan skala terakhir pemain di TMP_Text
             coinText.text = "Coins: " + coinCount.ToString();
-            scaleText.text = scaledPercentage.ToString("F0"); // Menambahkan format persen ke teks
-            leaderboard.InvokeLeaderboard();
-            // Panggil metode SetStarsActive dari ResultMenu dan kirimkan nilai coinCount
+            scaleText.text = scaledPercentage.ToString("F0");
             ResultMenu.GetComponent<ResultMenu>().SetStarsActive(coinCount);
-
+            leaderboard.InvokeLeaderboard();
             StartCoroutine(LoadNextLevelWithDelay());
         }
     }
@@ -74,6 +70,29 @@ public class NextLevelTrigger : MonoBehaviour
             PlayerPrefs.SetInt("ReachedIndex", SceneManager.GetActiveScene().buildIndex + 1);
             PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("unlockedLevel", 1) + 1);
             PlayerPrefs.Save();
+        }
+
+    }
+
+    public void PlaySoundEffect()
+    {
+        // Memeriksa apakah audio source telah ditetapkan
+        if (externalAudioSource != null)
+        {
+            // Memeriksa apakah efek suara telah ditetapkan
+            if (soundEffect != null)
+            {
+                // Memainkan efek suara satu kali menggunakan audio source eksternal
+                externalAudioSource.PlayOneShot(soundEffect);
+            }
+            else
+            {
+                Debug.LogError("No sound effect assigned!");
+            }
+        }
+        else
+        {
+            Debug.LogError("No external audio source assigned!");
         }
 
     }
