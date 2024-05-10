@@ -119,18 +119,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.030957222, y: -0.023602009}
+  m_Offset: {x: -0.00042915344, y: -0.006482601}
   m_SpriteTilingProperty:
-    border: {x: 0.158, y: 0.8246667, z: 0.158, w: 0.838}
+    border: {x: 0.1185, y: 0.6185, z: 0.1185, w: 0.6285}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.62, y: 2.88}
+    oldSize: {x: 1.215, y: 2.16}
     newSize: {x: 1.0177778, y: 0.96}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2616558, y: 1.0719061}
+  m_Size: {x: 0.9820366, y: 0.92924356}
   m_EdgeRadius: 0
 --- !u!114 &8971439529349140880
 MonoBehaviour:
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc4e5b277af4c394799ad511bf33d1d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  polarity: 1
+  polarity: 0
   magneticForce: 22.03
   magneticRadius: 5
 --- !u!1 &7858568227202850816
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ComponentVersion: 1
   m_LightType: 3
-  m_BlendStyleIndex: 0
+  m_BlendStyleIndex: 2
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 0, b: 0.029955864, a: 1}
   m_Intensity: 2.95
@@ -204,11 +204,11 @@ MonoBehaviour:
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
-  m_OverlapOperation: 0
+  m_OverlapOperation: 1
   m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
+  m_NormalMapQuality: 0
   m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensityEnabled: 1
   m_ShadowIntensity: 0.75
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75

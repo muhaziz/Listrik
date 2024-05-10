@@ -4,6 +4,10 @@ using UnityEngine.SceneManagement;
 public class SpikeHandler : MonoBehaviour
 {
     public GameObject GameOver;
+    public AudioClip soundEffect;
+    public AudioSource externalAudioSource;
+    public GameObject Music;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -11,16 +15,31 @@ public class SpikeHandler : MonoBehaviour
             Destroy(collision.gameObject);
             Time.timeScale = 0;
             GameOver.SetActive(true);
+            Music.SetActive(false);
+            PlaySoundEffect();
         }
     }
 
-    // Metode untuk me-restart level
-    private void RestartLevel()
+    public void PlaySoundEffect()
     {
-        // Mendapatkan indeks dari level yang sedang dimuat
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        // Memeriksa apakah audio source telah ditetapkan
+        if (externalAudioSource != null)
+        {
+            // Memeriksa apakah efek suara telah ditetapkan
+            if (soundEffect != null)
+            {
+                // Memainkan efek suara satu kali menggunakan audio source eksternal
+                externalAudioSource.PlayOneShot(soundEffect);
+            }
+            else
+            {
+                Debug.LogError("No sound effect assigned!");
+            }
+        }
+        else
+        {
+            Debug.LogError("No external audio source assigned!");
+        }
 
-        // Me-restart level dengan indeks yang sama
-        SceneManager.LoadScene(currentSceneIndex);
     }
 }
