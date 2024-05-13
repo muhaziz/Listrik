@@ -52,7 +52,6 @@ public class NextLevelTrigger : MonoBehaviour
             coinText.text = "Coins: " + coinCount.ToString();
             scaleText.text = scaledPercentage.ToString("F0");
             ResultMenu.GetComponent<ResultMenu>().SetStarsActive(coinCount);
-            leaderboard.InvokeLeaderboard();
             StartCoroutine(LoadNextLevelWithDelay());
         }
     }
@@ -61,6 +60,8 @@ public class NextLevelTrigger : MonoBehaviour
     {
         yield return new WaitForSeconds(delayBeforeLoading);
         ResultMenu.gameObject.SetActive(true);
+
+        leaderboard.InvokeLeaderboard();
     }
 
     void UnlockedLevel()
