@@ -186,7 +186,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,6 +194,27 @@ TextureImporter:
       bones: []
       spriteID: b8ed3b7a876d69544ba47f4a34766fc0
       internalID: 41302896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jembatan_kanankiri2
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 721
+        width: 42
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f6d6eeb0bc8c8439e8109b90d969f3
+      internalID: 390746753
       vertices: []
       indices: 
       edges: []
@@ -211,6 +232,7 @@ TextureImporter:
     nameFileIdTable:
       Season_collection_0: 616355271
       jembatan_goyang: 1679608310
+      jembatan_kanankiri2: 390746753
       jembatan_naikturun: 1975676188
       trigger_jembatan: 41302896
   mipmapLimitGroupName: 
