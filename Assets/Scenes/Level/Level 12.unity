@@ -1129,8 +1129,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.10374999, y: 0.27005, z: 0}
-    m_Extent: {x: 1.30495, y: 1.2734499, z: 0}
+    m_Center: {x: 0.10395002, y: 0.26954997, z: 0}
+    m_Extent: {x: 1.30475, y: 1.27275, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8013,6 +8013,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1791551595}
   - component: {fileID: 1791551594}
+  - component: {fileID: 1791551596}
   m_Layer: 0
   m_Name: damage_2
   m_TagString: Untagged
@@ -8089,6 +8090,22 @@ Transform:
   - {fileID: 1184679948}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1791551596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791551593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f15b9ddded32404ca53936bbb299400, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameOver: {fileID: 1192395310}
+  soundEffect: {fileID: 8300000, guid: e359510267404a0478fb163b539d9367, type: 3}
+  externalAudioSource: {fileID: 767586195}
+  Music: {fileID: 1409446820}
 --- !u!114 &1793894611 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8113734083107312473, guid: b47eb0533b6c2f2448bda53e72e344d6, type: 3}
@@ -9319,11 +9336,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1057941169707715947, guid: 05ce8cc01c9715c4d9b8593b36d99623, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.85
+      value: 11.55
       objectReference: {fileID: 0}
     - target: {fileID: 1057941169707715947, guid: 05ce8cc01c9715c4d9b8593b36d99623, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.46
+      value: -1.48
       objectReference: {fileID: 0}
     - target: {fileID: 1057941169707715947, guid: 05ce8cc01c9715c4d9b8593b36d99623, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9363,7 +9380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8315328230612418794, guid: 05ce8cc01c9715c4d9b8593b36d99623, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
