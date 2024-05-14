@@ -131,6 +131,17 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""f25bb7a8-de7c-43a7-9172-b86d953ce402"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""b44a962e-151e-4f35-b1ef-7f7b37de5d29"",
                     ""path"": ""<Keyboard>/leftShift"",
                     ""interactions"": """",
