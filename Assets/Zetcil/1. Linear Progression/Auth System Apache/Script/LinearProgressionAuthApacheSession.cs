@@ -9,6 +9,8 @@ public class LinearProgressionAuthApacheSession : MonoBehaviour
     [Header("Auth Settings")]
     public string CurrentEmail;
     public InputField CurrentEmailField;
+    public string CurrentNickName;
+    public InputField CurrentNickNameField;
 
     // Start is called before the first frame update
     void Start()
