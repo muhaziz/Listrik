@@ -165,7 +165,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,6 +173,27 @@ TextureImporter:
       bones: []
       spriteID: 5db7286afcd223e488cd216ca2009429
       internalID: 1975676188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trigger_jembatan
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 912
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ed3b7a876d69544ba47f4a34766fc0
+      internalID: 41302896
       vertices: []
       indices: 
       edges: []
@@ -191,6 +212,7 @@ TextureImporter:
       Season_collection_0: 616355271
       jembatan_goyang: 1679608310
       jembatan_naikturun: 1975676188
+      trigger_jembatan: 41302896
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
