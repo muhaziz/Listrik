@@ -45,6 +45,9 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
         {
             Dashing = false;
         }
+        if (!context.performed) { return; }
+
+        DashEvent?.Invoke();
     }
 
     public void OnJump(InputAction.CallbackContext context)
