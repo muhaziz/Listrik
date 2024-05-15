@@ -854,8 +854,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f15b9ddded32404ca53936bbb299400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
-  GameoverActive: {fileID: 0}
+  manager: {fileID: 767586196}
+  GameoverActive: {fileID: 1192395312}
   GameOver: {fileID: 1192395310}
   soundEffect: {fileID: 8300000, guid: e359510267404a0478fb163b539d9367, type: 3}
   externalAudioSource: {fileID: 767586195}
@@ -1306,8 +1306,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.103949964, y: 0.26985002, z: 0}
-    m_Extent: {x: 1.3052499, y: 1.27285, z: 0}
+    m_Center: {x: 0.10475004, y: 0.27029997, z: 0}
+    m_Extent: {x: 1.30505, y: 1.2734001, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2685,6 +2685,11 @@ GameObject:
 --- !u!224 &1192395311 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4692296234862755284, guid: e64f2a3a4a0ea9e44bab0985dfa9f312, type: 3}
+  m_PrefabInstance: {fileID: 1192395309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1192395312 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8959055919359652209, guid: e64f2a3a4a0ea9e44bab0985dfa9f312, type: 3}
   m_PrefabInstance: {fileID: 1192395309}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1224503055 stripped
