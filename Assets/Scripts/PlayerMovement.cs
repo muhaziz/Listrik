@@ -3,76 +3,57 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private float horizontal;
+    private InputReader inputReader;
+    private Rigidbody2D rb;
+    private TrailRenderer tr;
+    private bool isFacingRight = true;
+    private bool canDash = true;
+    private bool isDashing = false;
     [SerializeField] private float speed = 8f;
     [SerializeField] private float jumpingPower = 16f;
-    private bool isFacingRight = true;
-
-    private bool canDash = true;
-    private bool isDashing;
-    public float dashingPower = 24f;
-    private float dashingTime = 0.2f;
-    private float dashingCooldown = 1f;
-
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private float dashingPower = 24f;
+    [SerializeField] private float dashingTime = 0.2f;
+    [SerializeField] private float dashingCooldown = 1f;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private TrailRenderer tr;
 
-    private void Update()
+    private void Awake()
     {
-        if (isDashing)
-        {
-            return;
-        }
+        inputReader = GetComponent<InputReader>();
+        rb = GetComponent<Rigidbody2D>();
+        tr = GetComponent<TrailRenderer>();
 
-        horizontal = Input.GetAxisRaw("Horizontal");
+        inputReader.JumpEvent += Jump;
+        inputReader.DashEvent += Dash;
+    }
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+    private void OnEnable()
+    {
+        inputReader.enabled = true;
+    }
+
+    private void OnDisable()
+    {
+        inputReader.enabled = false;
+    }
+
+    private void Jump()
+    {
+        if (IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
-
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
-        {
-            StartCoroutine(Dash());
-        }
-
-        Flip();
     }
 
-    private void FixedUpdate()
+    private void Dash()
     {
-        if (isDashing)
+        if (canDash)
         {
-            return;
-        }
-
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-    }
-
-    private bool IsGrounded()
-    {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-    }
-
-    private void Flip()
-    {
-        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
-        {
-            Vector3 localScale = transform.localScale;
-            isFacingRight = !isFacingRight;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
+            StartCoroutine(DashCoroutine());
         }
     }
 
-    private IEnumerator Dash()
+    private IEnumerator DashCoroutine()
     {
         canDash = false;
         isDashing = true;
@@ -87,4 +68,29 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
     }
+
+    private void FixedUpdate()
+    {
+        if (!isDashing)
+        {
+            rb.velocity = new Vector2(inputReader.MovementValue.x * speed, rb.velocity.y);
+            Flip();
+        }
+    }
+
+    private bool IsGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }
+    private void Flip()
+    {
+        if (isFacingRight && inputReader.MovementValue.x < 0f || !isFacingRight && inputReader.MovementValue.x > 0f)
+        {
+            Vector3 localScale = transform.localScale;
+            isFacingRight = !isFacingRight;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
+    }
+
 }

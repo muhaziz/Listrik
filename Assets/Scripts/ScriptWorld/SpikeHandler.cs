@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class SpikeHandler : MonoBehaviour
 {
+    public GameManager manager;
+    public GameObject GameoverActive;
     public GameObject GameOver;
     public AudioClip soundEffect;
     public AudioSource externalAudioSource;
@@ -16,6 +18,7 @@ public class SpikeHandler : MonoBehaviour
             Time.timeScale = 0;
             GameOver.SetActive(true);
             Music.SetActive(false);
+            manager.ChangeActiveUI(GameoverActive);
             PlaySoundEffect();
         }
     }

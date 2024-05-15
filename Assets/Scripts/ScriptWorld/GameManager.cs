@@ -2,11 +2,13 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
     public InputReader inputReader; // Referensi ke InputReader
     public GameObject pausePanel; // Panel pause
+    public GameObject pauseActive; // Panel pause
     public String SceneMenu = "Main Menu";
     private bool gameIsPaused = false;
 
@@ -34,6 +36,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         gameIsPaused = true;
         pausePanel.SetActive(true);
+        ChangeActiveUI(pauseActive);
     }
 
     // Metode untuk melanjutkan permainan
@@ -60,4 +63,15 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    public void ChangeActiveUI(GameObject UI)
+    {
+        EventSystem.current.SetSelectedGameObject(UI);
+    }
+
+    public void DestroyObject(GameObject UI)
+    {
+        Destroy(UI);
+    }
+
 }
