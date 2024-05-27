@@ -207,7 +207,7 @@ TextureImporter:
         width: 42
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,6 +215,27 @@ TextureImporter:
       bones: []
       spriteID: c9f6d6eeb0bc8c8439e8109b90d969f3
       internalID: 390746753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: batu
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 944
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2273c6e4a3861384bbef876951ee8802
+      internalID: 1495461994
       vertices: []
       indices: 
       edges: []
@@ -231,6 +252,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Season_collection_0: 616355271
+      batu: 1495461994
       jembatan_goyang: 1679608310
       jembatan_kanankiri2: 390746753
       jembatan_naikturun: 1975676188
