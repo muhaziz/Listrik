@@ -1152,8 +1152,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.043000042, y: 0.26825, z: 0}
-    m_Extent: {x: 1.5421, y: 1.30615, z: 0}
+    m_Center: {x: 0.04185003, y: 0.26764995, z: 0}
+    m_Extent: {x: 1.5422499, y: 1.30675, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2050,6 +2050,10 @@ PrefabInstance:
       propertyPath: GameOverUI
       value: 
       objectReference: {fileID: 52212}
+    - target: {fileID: 7096544835537404592, guid: b47eb0533b6c2f2448bda53e72e344d6, type: 3}
+      propertyPath: GameOverActive
+      value: 
+      objectReference: {fileID: 996647363}
     - target: {fileID: 7933966400196697223, guid: b47eb0533b6c2f2448bda53e72e344d6, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -6349,8 +6353,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f15b9ddded32404ca53936bbb299400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
-  GameoverActive: {fileID: 0}
+  manager: {fileID: 47832300}
+  GameoverActive: {fileID: 996647363}
   GameOver: {fileID: 52212}
   soundEffect: {fileID: 8300000, guid: e359510267404a0478fb163b539d9367, type: 3}
   externalAudioSource: {fileID: 47832299}
@@ -6433,8 +6437,8 @@ SceneRoots:
   - {fileID: 920267104}
   - {fileID: 877754715}
   - {fileID: 504291172}
-  - {fileID: 1902291384}
   - {fileID: 559675025}
   - {fileID: 1430284179}
   - {fileID: 1391953669}
   - {fileID: 1527426685}
+  - {fileID: 1902291384}

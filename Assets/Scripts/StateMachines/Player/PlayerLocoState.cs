@@ -66,6 +66,7 @@ public class PlayerLocoState : PlayerBaseState
     }
     private void GameOverUi()
     {
+        stateMachine.ChangeActiveUI(stateMachine.GameOverActive);
         stateMachine.GameOverUI.SetActive(true);
     }
     private void GameOver()

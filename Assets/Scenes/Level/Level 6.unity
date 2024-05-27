@@ -296,8 +296,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f15b9ddded32404ca53936bbb299400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
-  GameoverActive: {fileID: 0}
+  manager: {fileID: 1804443664}
+  GameoverActive: {fileID: 540302544}
   GameOver: {fileID: 893729475}
   soundEffect: {fileID: 8300000, guid: e359510267404a0478fb163b539d9367, type: 3}
   externalAudioSource: {fileID: 1804443663}
@@ -2303,8 +2303,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.10410005, y: 0.27045, z: 0}
-    m_Extent: {x: 1.3043001, y: 1.27325, z: 0}
+    m_Center: {x: 0.10395002, y: 0.27005, z: 0}
+    m_Extent: {x: 1.30515, y: 1.27245, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2853,18 +2853,10 @@ PrefabInstance:
       propertyPath: GameOverUI
       value: 
       objectReference: {fileID: 893729475}
-    - target: {fileID: 7933966400196697223, guid: b47eb0533b6c2f2448bda53e72e344d6, type: 3}
-      propertyPath: m_Color.b
-      value: 0.17254902
-      objectReference: {fileID: 0}
-    - target: {fileID: 7933966400196697223, guid: b47eb0533b6c2f2448bda53e72e344d6, type: 3}
-      propertyPath: m_Color.g
-      value: 0.17254902
-      objectReference: {fileID: 0}
-    - target: {fileID: 7933966400196697223, guid: b47eb0533b6c2f2448bda53e72e344d6, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 7096544835537404592, guid: b47eb0533b6c2f2448bda53e72e344d6, type: 3}
+      propertyPath: GameOverActive
+      value: 
+      objectReference: {fileID: 540302544}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7737,21 +7729,21 @@ SceneRoots:
   - {fileID: 1409446821}
   - {fileID: 113499228}
   - {fileID: 539892538}
-  - {fileID: 920267104}
-  - {fileID: 928144383}
-  - {fileID: 877754715}
-  - {fileID: 1559130108}
-  - {fileID: 1372495891}
-  - {fileID: 100572241}
-  - {fileID: 92474332}
-  - {fileID: 285980060}
   - {fileID: 1245993371}
   - {fileID: 1987422645}
+  - {fileID: 928144383}
+  - {fileID: 1559130108}
   - {fileID: 2009464457}
   - {fileID: 69257194}
   - {fileID: 2097633598}
+  - {fileID: 1372495891}
+  - {fileID: 100572241}
+  - {fileID: 92474332}
+  - {fileID: 920267104}
+  - {fileID: 877754715}
+  - {fileID: 285980060}
   - {fileID: 1148893392}
-  - {fileID: 472146287}
   - {fileID: 1331235739}
+  - {fileID: 472146287}
   - {fileID: 1527426685}
   - {fileID: 73324758}

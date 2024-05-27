@@ -324,8 +324,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f15b9ddded32404ca53936bbb299400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
-  GameoverActive: {fileID: 0}
+  manager: {fileID: 1507144552}
+  GameoverActive: {fileID: 761387958}
   GameOver: {fileID: 374317113}
   soundEffect: {fileID: 8300000, guid: e359510267404a0478fb163b539d9367, type: 3}
   externalAudioSource: {fileID: 1507144551}
@@ -1050,18 +1050,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 458785989}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1713150743}
   - {fileID: 191589296}
-  m_Father: {fileID: 1405115560}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -880, y: -525}
+  m_AnchoredPosition: {x: 80, y: 15}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &458785992
@@ -1506,8 +1506,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.042550027, y: 0.26725, z: 0}
-    m_Extent: {x: 1.5415499, y: 1.30685, z: 0}
+    m_Center: {x: 0.042600036, y: 0.26769996, z: 0}
+    m_Extent: {x: 1.5423, y: 1.306, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2553,6 +2553,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7096544835537404592, guid: b47eb0533b6c2f2448bda53e72e344d6, type: 3}
+      propertyPath: GameOverUI
+      value: 
+      objectReference: {fileID: 374317113}
+    - target: {fileID: 7096544835537404592, guid: b47eb0533b6c2f2448bda53e72e344d6, type: 3}
+      propertyPath: GameOverActive
+      value: 
+      objectReference: {fileID: 761387958}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4692,7 +4700,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1473420165}
-  - {fileID: 458785991}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -9164,12 +9171,13 @@ SceneRoots:
   - {fileID: 1180861337}
   - {fileID: 539892538}
   - {fileID: 928144383}
-  - {fileID: 1405115560}
-  - {fileID: 2070852224}
-  - {fileID: 920267104}
-  - {fileID: 877754715}
-  - {fileID: 1527426685}
-  - {fileID: 1265505963}
-  - {fileID: 2093850058}
-  - {fileID: 138498695}
   - {fileID: 37237916}
+  - {fileID: 1405115560}
+  - {fileID: 920267104}
+  - {fileID: 2070852224}
+  - {fileID: 877754715}
+  - {fileID: 1265505963}
+  - {fileID: 458785991}
+  - {fileID: 2093850058}
+  - {fileID: 1527426685}
+  - {fileID: 138498695}

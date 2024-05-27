@@ -4881,8 +4881,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f15b9ddded32404ca53936bbb299400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
-  GameoverActive: {fileID: 0}
+  manager: {fileID: 616742756}
+  GameoverActive: {fileID: 138895668}
   GameOver: {fileID: 532469971}
   soundEffect: {fileID: 8300000, guid: e359510267404a0478fb163b539d9367, type: 3}
   externalAudioSource: {fileID: 616742755}
@@ -4919,7 +4919,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.9245405, y: 0}
+  m_Offset: {x: -0.24442863, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4930,7 +4930,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 36.615204, y: 1}
+  m_Size: {x: 44.97086, y: 1}
   m_EdgeRadius: 0
 --- !u!4 &1033595391
 Transform:
@@ -5013,8 +5013,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00055003166, y: -0.00029999018, z: 0}
-    m_Extent: {x: 1.00045, y: 1.0004001, z: 0}
+    m_Center: {x: -0.000050008297, y: 0.00045001507, z: 0}
+    m_Extent: {x: 1.0006499, y: 1.00045, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7081,6 +7081,10 @@ PrefabInstance:
       propertyPath: GameOverUI
       value: 
       objectReference: {fileID: 532469971}
+    - target: {fileID: 7096544835537404592, guid: b47eb0533b6c2f2448bda53e72e344d6, type: 3}
+      propertyPath: GameOverActive
+      value: 
+      objectReference: {fileID: 138895668}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7100,10 +7104,10 @@ SceneRoots:
   - {fileID: 253913426}
   - {fileID: 901605442}
   - {fileID: 933703792}
-  - {fileID: 2085079540}
+  - {fileID: 431456509}
   - {fileID: 81585651}
   - {fileID: 950834075}
   - {fileID: 1805462895}
   - {fileID: 1177131110}
-  - {fileID: 431456509}
+  - {fileID: 2085079540}
   - {fileID: 1033595391}

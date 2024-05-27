@@ -194,7 +194,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 1541149627, guid: 72525b1363ef5c24ca4fb5f96303ca76, type: 3}
-  m_Color: {r: 0.9245283, g: 0.17967243, b: 0.22014461, a: 1}
+  m_Color: {r: 1, g: 0.17254902, b: 0.17254902, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -229,9 +229,10 @@ MonoBehaviour:
   LagiDash: 0
   DashCoolRun: 0
   LagiHeal: 0
-  facingRight: 1
+  facingRight: 0
   flipRotationY: 180
-  GameOverUI: {fileID: 1361144482754979091, guid: e64f2a3a4a0ea9e44bab0985dfa9f312, type: 3}
+  GameOverUI: {fileID: 0}
+  GameOverActive: {fileID: 0}
   <JumpForce>k__BackingField: 8
   <MaxReduction>k__BackingField: 0.5
   <ReductionRate>k__BackingField: 0.3

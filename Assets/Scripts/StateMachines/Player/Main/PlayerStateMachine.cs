@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerStateMachine : StateMachine
 {
@@ -26,7 +27,7 @@ public class PlayerStateMachine : StateMachine
     [SerializeField] private float flipRotationY = 180f;
 
     public GameObject GameOverUI;
-
+    public GameObject GameOverActive;
 
     //! Jump System
     [field: SerializeField] public float JumpForce { get; private set; }
@@ -89,5 +90,8 @@ public class PlayerStateMachine : StateMachine
             transform.eulerAngles = newRotation;
         }
     }
-
+    public void ChangeActiveUI(GameObject UI)
+    {
+        EventSystem.current.SetSelectedGameObject(UI);
+    }
 }
