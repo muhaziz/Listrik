@@ -228,7 +228,7 @@ TextureImporter:
         width: 14
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,6 +236,27 @@ TextureImporter:
       bones: []
       spriteID: 2273c6e4a3861384bbef876951ee8802
       internalID: 1495461994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pintu_horizontal
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 950
+        width: 43
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7966346d7bb90e48a6c1faa662c3889
+      internalID: -1116352086
       vertices: []
       indices: 
       edges: []
@@ -256,6 +277,7 @@ TextureImporter:
       jembatan_goyang: 1679608310
       jembatan_kanankiri2: 390746753
       jembatan_naikturun: 1975676188
+      pintu_horizontal: -1116352086
       trigger_jembatan: 41302896
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
