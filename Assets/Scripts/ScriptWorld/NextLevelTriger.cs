@@ -56,6 +56,7 @@ public class NextLevelTrigger : MonoBehaviour
             ResultMenu.GetComponent<ResultMenu>().SetStarsActive(coinCount);
             leaderboard.InvokeLeaderboard();
             StartCoroutine(LoadNextLevelWithDelay());
+
         }
     }
 
@@ -64,6 +65,7 @@ public class NextLevelTrigger : MonoBehaviour
         yield return new WaitForSeconds(delayBeforeLoading);
         manager.ChangeActiveUI(resultActive);
         ResultMenu.gameObject.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     void UnlockedLevel()
