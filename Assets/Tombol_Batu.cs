@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tombol : MonoBehaviour
+public class Tombol_Batu : MonoBehaviour
 {
     public GameObject ObjectActivate;
     public Animator objectAnimator; // Referensi ke komponen Animator pada objek yang ingin Anda animasikan
@@ -25,6 +25,25 @@ public class Tombol : MonoBehaviour
                 Debug.Log("Close");
                 ObjectActivate.SetActive(false);
                 objectAnimator.SetBool("isOpen", false);
+            }
+            else
+            {
+                Debug.Log("Open");
+                ObjectActivate.SetActive(true);
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Player exits trigger zone");
+
+            if (ObjectActivate.activeSelf)
+            {
+                Debug.Log("Close");
+                ObjectActivate.SetActive(false);
             }
             else
             {
