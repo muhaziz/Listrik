@@ -537,6 +537,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 772325091}
+    - target: {fileID: 4172201409081989314, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
     - target: {fileID: 4451025366885145314, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -4930,8 +4934,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.000100016594, y: -0.00020000339, z: 0}
-    m_Extent: {x: 1.0005, y: 0.99969995, z: 0}
+    m_Center: {x: -0.00049999356, y: 0, z: 0}
+    m_Extent: {x: 1.0001, y: 1.0007, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.34
@@ -5106,11 +5110,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 772325088}
-  resultActive: {fileID: 2092148249}
   leaderboard: {fileID: 1738974200}
   playerTag: Player
   objectToActivate: {fileID: 1985390537}
   ResultMenu: {fileID: 2756284334238581342}
+  resultActive: {fileID: 2092148249}
   coinText: {fileID: 6931730886089790776}
   scaleText: {fileID: 302340116}
   soundEffect: {fileID: 8300000, guid: 341a15ed5b649f24baa18a829f3f2811, type: 3}
@@ -5153,8 +5157,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00075000525, y: 0.00014999509, z: 0}
-    m_Extent: {x: 1.00015, y: 0.99995005, z: 0}
+    m_Center: {x: -0.00090000033, y: -0.00029999018, z: 0}
+    m_Extent: {x: 1, y: 1.0006001, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

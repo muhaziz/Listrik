@@ -7,11 +7,11 @@ using UnityEngine.UI;
 public class NextLevelTrigger : MonoBehaviour
 {
     public GameManager manager;
-    public GameObject resultActive;
     public LinearProgressionAuthApacheLeaderboard leaderboard;
     public string playerTag = "Player";
     public GameObject objectToActivate;
     public GameObject ResultMenu;
+    public GameObject resultActive;
     public TMP_Text coinText;
     public TMP_Text scaleText;
     public AudioClip soundEffect;

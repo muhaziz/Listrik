@@ -1459,11 +1459,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 1507144552}
-  resultActive: {fileID: 1079295066}
   leaderboard: {fileID: 2093850059}
   playerTag: Player
   objectToActivate: {fileID: 920267102}
   ResultMenu: {fileID: 928551406}
+  resultActive: {fileID: 1079295066}
   coinText: {fileID: 928551409}
   scaleText: {fileID: 928551408}
   soundEffect: {fileID: 8300000, guid: 341a15ed5b649f24baa18a829f3f2811, type: 3}
@@ -1506,8 +1506,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.042600036, y: 0.26769996, z: 0}
-    m_Extent: {x: 1.5423, y: 1.306, z: 0}
+    m_Center: {x: 0.042600036, y: 0.26809996, z: 0}
+    m_Extent: {x: 1.543, y: 1.3069999, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
