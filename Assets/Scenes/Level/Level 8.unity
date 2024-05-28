@@ -1351,6 +1351,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AuthApacheSession
       objectReference: {fileID: 0}
+    - target: {fileID: 6848828486937518679, guid: bedfdc488092b60448d9bfb446a8493b, type: 3}
+      propertyPath: CurrentEmailField
+      value: 
+      objectReference: {fileID: 1207359740}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3754,7 +3758,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 8
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4899,9 +4903,17 @@ PrefabInstance:
       value: AuthApacheLeaderboard
       objectReference: {fileID: 0}
     - target: {fileID: 4085407521247127685, guid: 8e878ddfb4aca8442b53d04c25f095ea, type: 3}
+      propertyPath: Level
+      value: 
+      objectReference: {fileID: 1282279459}
+    - target: {fileID: 4085407521247127685, guid: 8e878ddfb4aca8442b53d04c25f095ea, type: 3}
       propertyPath: Score
       value: 
       objectReference: {fileID: 142028042}
+    - target: {fileID: 4085407521247127685, guid: 8e878ddfb4aca8442b53d04c25f095ea, type: 3}
+      propertyPath: Username
+      value: 
+      objectReference: {fileID: 1207359740}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7939,9 +7951,9 @@ SceneRoots:
   - {fileID: 920267104}
   - {fileID: 877754715}
   - {fileID: 396602129}
-  - {fileID: 1527426685}
-  - {fileID: 1671312239}
-  - {fileID: 1282279461}
-  - {fileID: 1207359743}
   - {fileID: 443155524}
+  - {fileID: 1207359743}
+  - {fileID: 1282279461}
+  - {fileID: 1671312239}
+  - {fileID: 1527426685}
   - {fileID: 1430118998}
