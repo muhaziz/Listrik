@@ -1458,8 +1458,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.10444999, y: 0.27034998, z: 0}
-    m_Extent: {x: 1.30475, y: 1.27205, z: 0}
+    m_Center: {x: 0.10430002, y: 0.26999998, z: 0}
+    m_Extent: {x: 1.3048, y: 1.2728, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1536,9 +1536,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1528121404797405425, guid: f12acb48de6c01d4192d0dcc652b30ca, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 544313299}
-    - targetCorrespondingSourceObject: {fileID: 1528121404797405425, guid: f12acb48de6c01d4192d0dcc652b30ca, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 544313303}
   m_SourcePrefab: {fileID: 100100000, guid: f12acb48de6c01d4192d0dcc652b30ca, type: 3}
 --- !u!1 &544313298 stripped
@@ -1546,20 +1543,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1528121404797405425, guid: f12acb48de6c01d4192d0dcc652b30ca, type: 3}
   m_PrefabInstance: {fileID: 544313297}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &544313299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 544313298}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c77dae7f2fabea468d59080ae35ff4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectActivate: {fileID: 1630636735}
-  objectAnimator: {fileID: 1630636738}
 --- !u!114 &544313303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1572,8 +1555,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1b61611dc287bc488bbba36df981694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorAnimator: {fileID: 1630636738}
-  animationParameter: isOpen
+  objectAnimator: {fileID: 1630636740}
+  ObjectActivate: {fileID: 1630636735}
 --- !u!1 &544893312
 GameObject:
   m_ObjectHideFlags: 0
@@ -4467,8 +4450,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1630636737}
   - component: {fileID: 1630636736}
-  - component: {fileID: 1630636738}
   - component: {fileID: 1630636739}
+  - component: {fileID: 1630636740}
   m_Layer: 3
   m_Name: pintu_horizontal
   m_TagString: Untagged
@@ -4543,27 +4526,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1630636738
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1630636735}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c941d0ed8a59ed845b618779955d880c, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!61 &1630636739
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4609,6 +4571,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.34375, y: 0.1875}
   m_EdgeRadius: 0
+--- !u!95 &1630636740
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630636735}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c941d0ed8a59ed845b618779955d880c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1680385944
 GameObject:
   m_ObjectHideFlags: 0
@@ -5436,6 +5419,16 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 2
       m_TileSpriteIndex: 2
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -8, y: -6, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -7073,7 +7066,7 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 59
+  - m_RefCount: 60
     m_Data: {fileID: 11400000, guid: ecbe983dac6d2324faa45404c58cfd03, type: 2}
   - m_RefCount: 19
     m_Data: {fileID: 11400000, guid: c76220eb89278ee4998a22c76339e978, type: 2}
@@ -7084,7 +7077,7 @@ Tilemap:
   - m_RefCount: 18
     m_Data: {fileID: 11400000, guid: 9d86b5fad89c931439985c00f80ce7f0, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 59
+  - m_RefCount: 60
     m_Data: {fileID: -1774596661, guid: 81378e17e1b718e46a024bfb0c15fb17, type: 3}
   - m_RefCount: 19
     m_Data: {fileID: 881952604, guid: 81378e17e1b718e46a024bfb0c15fb17, type: 3}
@@ -7095,7 +7088,7 @@ Tilemap:
   - m_RefCount: 18
     m_Data: {fileID: 1983315218, guid: 79d37115a41a4ca4ba1c4e8062cabff9, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 220
+  - m_RefCount: 221
     m_Data:
       e00: 1
       e01: 0
@@ -7114,7 +7107,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 220
+  - m_RefCount: 221
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -7332,6 +7325,7 @@ EdgeCollider2D:
   - {x: -2.0080147, y: -2.988457}
   - {x: 0.9982786, y: -2.9938347}
   - {x: 0.9915621, y: -8.987118}
+  - {x: 5.5602875, y: -8.988096}
   - {x: 7.9848633, y: -8.988615}
   - {x: 8.003136, y: -4.988901}
   - {x: 2.9800406, y: -5.043612}
@@ -7397,7 +7391,9 @@ EdgeCollider2D:
   - {x: -6.9873047, y: -0.018053606}
   - {x: -6.977933, y: -1.0160995}
   - {x: -8.00238, y: -1.0153099}
-  - {x: -7.9526496, y: -6.0054674}
+  - {x: -7.9763045, y: -4.9721093}
+  - {x: -6.995942, y: -4.9958277}
+  - {x: -6.9831085, y: -5.997952}
   - {x: -8.999179, y: -5.9821672}
   - {x: -9.0127735, y: -8.97253}
   m_AdjacentStartPoint: {x: 0, y: 0}

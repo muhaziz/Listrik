@@ -1326,7 +1326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1c1d503e04cc9a4980910b54edf9799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
+  manager: {fileID: 767586196}
   leaderboard: {fileID: 972049545}
   playerTag: Player
   objectToActivate: {fileID: 920267102}
@@ -1374,8 +1374,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.10399997, y: 0.27040005, z: 0}
-    m_Extent: {x: 1.3047, y: 1.2722, z: 0}
+    m_Center: {x: 0.104550004, y: 0.27015, z: 0}
+    m_Extent: {x: 1.30475, y: 1.2725501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3308,14 +3308,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1528121404797405425, guid: f12acb48de6c01d4192d0dcc652b30ca, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1301257791}
+      addedObject: {fileID: 1301257795}
   m_SourcePrefab: {fileID: 100100000, guid: f12acb48de6c01d4192d0dcc652b30ca, type: 3}
 --- !u!1 &1301257790 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1528121404797405425, guid: f12acb48de6c01d4192d0dcc652b30ca, type: 3}
   m_PrefabInstance: {fileID: 1301257789}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1301257791
+--- !u!114 &1301257795
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3324,7 +3324,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1301257790}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be732be78143ec04d97da2bec5d1a6dd, type: 3}
+  m_Script: {fileID: 11500000, guid: 749230d583a92984f8ae58b8f80e1937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectActivate: {fileID: 33499803}
@@ -3608,7 +3608,7 @@ GameObject:
   - component: {fileID: 1484088924}
   m_Layer: 0
   m_Name: batu
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

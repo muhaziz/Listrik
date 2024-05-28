@@ -1,10 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorTrigger : MonoBehaviour
+public class Tombol_jembatan : MonoBehaviour
 {
-
-    public Animator objectAnimator; // Referensi ke komponen Animator pada objek yang ingin Anda animasikan
     public GameObject ObjectActivate;
+    public Animator objectAnimator; // Referensi ke komponen Animator pada objek yang ingin Anda animasikan
 
     private void Start()
     {

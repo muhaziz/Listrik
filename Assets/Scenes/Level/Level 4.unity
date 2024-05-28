@@ -1152,8 +1152,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.042299986, y: 0.26810002, z: 0}
-    m_Extent: {x: 1.5415, y: 1.3069, z: 0}
+    m_Center: {x: 0.04245001, y: 0.26810002, z: 0}
+    m_Extent: {x: 1.5415499, y: 1.3062, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2991,7 +2991,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1405115560
 RectTransform:
@@ -3327,8 +3327,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -959.08, y: -545.62}
-  m_SizeDelta: {x: 5.1482, y: 1.974}
+  m_AnchoredPosition: {x: -961.2, y: -540.55}
+  m_SizeDelta: {x: 13.0822, y: 5.0161}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1473420166
 MonoBehaviour:
@@ -3636,8 +3636,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.12, y: 0.000000014901}
-  m_SizeDelta: {x: 4.5727, y: 1.7177}
+  m_AnchoredPosition: {x: -0.0287, y: 0.0425}
+  m_SizeDelta: {x: 11.9208, y: 3.6716}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1644549807
 MonoBehaviour:
@@ -3659,9 +3659,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'harap perhatikan <color=yellow><b>magnet yang tersedia</b></color> untuk
-    <color=yellow><b>membantu</b></color> perjalananmu, kamu dapat merubah sumbu
-    <color=red><b>positif </b></color>ke sumbu<color=blue><b> negatif<color=yellow><b>
+  m_text: 'harap perhatikan <color=yellow><b>perubahan magnet</b></color> untuk <color=yellow><b>membantu</b></color>
+    perjalananmu, kamu dapat merubah diri kamu menjadi sumbu <color=red><b>positif
+    </b></color>ke sumbu<color=blue><b> negatif<color=yellow><b>
 
 '
   m_isRightToLeft: 0
@@ -3690,8 +3690,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.2
-  m_fontSizeBase: 0.2
+  m_fontSize: 0.57
+  m_fontSizeBase: 0.57
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
