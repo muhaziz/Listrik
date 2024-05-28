@@ -97,8 +97,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00025001168, y: -0.00025004148, z: 0}
-    m_Extent: {x: 0.99995005, y: 1.0007501, z: 0}
+    m_Center: {x: -0.00045001507, y: -0.00075000525, z: 0}
+    m_Extent: {x: 1.00045, y: 0.99995, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.34
@@ -229,10 +229,12 @@ MonoBehaviour:
   LagiDash: 0
   DashCoolRun: 0
   LagiHeal: 0
-  facingRight: 0
+  facingRight: 1
   flipRotationY: 180
+  externalAudioSource: {fileID: 0}
   GameOverUI: {fileID: 0}
   GameOverActive: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: e359510267404a0478fb163b539d9367, type: 3}
   <JumpForce>k__BackingField: 8
   <MaxReduction>k__BackingField: 0.5
   <ReductionRate>k__BackingField: 0.3

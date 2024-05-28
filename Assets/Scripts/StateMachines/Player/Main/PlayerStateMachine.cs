@@ -94,4 +94,5 @@ public class PlayerStateMachine : StateMachine
     {
         EventSystem.current.SetSelectedGameObject(UI);
     }
+
 }
