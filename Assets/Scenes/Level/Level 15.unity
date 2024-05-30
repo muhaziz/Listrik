@@ -333,6 +333,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2caf9e3a4ccf9b45869b1c012e9ef63, type: 3}
+--- !u!1 &108274119 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3714819821670899062, guid: e2caf9e3a4ccf9b45869b1c012e9ef63, type: 3}
+  m_PrefabInstance: {fileID: 108274118}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &113499226
 GameObject:
   m_ObjectHideFlags: 0
@@ -1458,8 +1463,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.10385001, y: 0.2702, z: 0}
-    m_Extent: {x: 1.30525, y: 1.2723, z: 0}
+    m_Center: {x: 0.104250014, y: 0.27000004, z: 0}
+    m_Extent: {x: 1.3050499, y: 1.2718999, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3882,7 +3887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c77dae7f2fabea468d59080ae35ff4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectActivate: {fileID: 0}
+  ObjectActivate: {fileID: 108274119}
   objectAnimator: {fileID: 0}
 --- !u!1 &1409446820
 GameObject:
