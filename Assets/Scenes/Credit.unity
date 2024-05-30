@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 527035958}
   - component: {fileID: 527035957}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -498,7 +498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691b4474586a837438098ad79f9a4a1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linkURL: https://youtu.be/TBcfhJoCVQo?si=2I8CxzyqtJ0zqm7O
+  linkURL: https://docs.google.com/forms/d/e/1FAIpQLSfG4eeaMT5_7Megab5X--Zz-OfqUmg4IN0Kdnc64PcUO6qEpw/viewform
 --- !u!4 &527035958
 Transform:
   m_ObjectHideFlags: 0
