@@ -2125,9 +2125,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8382655276361830678, guid: dea9d52b9fc703246b5e09eeca086ad4, type: 3}
+      propertyPath: Music
+      value: 
+      objectReference: {fileID: 1409446820}
+    - target: {fileID: 8382655276361830678, guid: dea9d52b9fc703246b5e09eeca086ad4, type: 3}
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 1793894611}
+    - target: {fileID: 8382655276361830678, guid: dea9d52b9fc703246b5e09eeca086ad4, type: 3}
+      propertyPath: pauseActive
+      value: 
+      objectReference: {fileID: 1247924353}
+    - target: {fileID: 8382655276361830678, guid: dea9d52b9fc703246b5e09eeca086ad4, type: 3}
+      propertyPath: soundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: bf4e26ed5c8d5104581be92d316d3d78, type: 3}
+    - target: {fileID: 8382655276361830678, guid: dea9d52b9fc703246b5e09eeca086ad4, type: 3}
+      propertyPath: externalAudioSource
+      value: 
+      objectReference: {fileID: 767586195}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3667,6 +3683,11 @@ PrefabInstance:
 --- !u!224 &1247924352 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2486766730312454175, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
+  m_PrefabInstance: {fileID: 1247924351}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1247924353 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6113391615456361461, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
   m_PrefabInstance: {fileID: 1247924351}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1373230673
