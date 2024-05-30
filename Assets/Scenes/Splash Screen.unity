@@ -532,7 +532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 1249971734}
-  nextSceneName: Main Menu
+  nextSceneName: CutScene
 --- !u!4 &1790487294
 Transform:
   m_ObjectHideFlags: 0
