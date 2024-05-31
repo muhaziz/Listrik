@@ -14,7 +14,7 @@ public class LinearProgressionAuthApacheServer : MonoBehaviour
 
     [Header("Server Settings")]
     public CServerType ServerType;
-    public string Apache = "http://localhost/";
+    public string Apache = "http://localhost";
 
     [Header("XML Settings")]
     public string MainXML = "/config/application.xml";

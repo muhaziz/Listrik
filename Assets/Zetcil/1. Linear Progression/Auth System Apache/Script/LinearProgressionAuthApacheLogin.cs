@@ -66,7 +66,7 @@ public class LinearProgressionAuthApacheLogin : MonoBehaviour
         pass_focused = Password.isFocused;
     }
 
-    public void SetCurrentSession()
+    public void SetCurrentSession() 
     {
         PlayerPrefs.SetString(LinearProgressionAuthApache.CURRENT_EMAIL, Email.text);
         PlayerPrefs.SetString(LinearProgressionAuthApache.CURRENT_PASS, Password.text);
