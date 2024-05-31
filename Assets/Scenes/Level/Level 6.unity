@@ -2037,8 +2037,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.10430002, y: 0.26935, z: 0}
-    m_Extent: {x: 1.3046, y: 1.2725501, z: 0}
+    m_Center: {x: 0.104250014, y: 0.26965004, z: 0}
+    m_Extent: {x: 1.30515, y: 1.2729499, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3388,6 +3388,46 @@ PrefabInstance:
     - target: {fileID: 2486766730312454175, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178536475045857082, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1804443663}
+    - target: {fileID: 3178536475045857082, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1804443663}
+    - target: {fileID: 3178536475045857082, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1804443663}
+    - target: {fileID: 3178536475045857082, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayOneShot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178536475045857082, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayOneShot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178536475045857082, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayOneShot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778344703133061692, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778344703133061692, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1804443663}
+    - target: {fileID: 3778344703133061692, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_mute
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778344703133061692, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4172201409081989314, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -7633,8 +7673,8 @@ SpriteRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1373230676}
   - {fileID: 1840183537}
+  - {fileID: 1373230676}
   - {fileID: 1409446821}
   - {fileID: 113499228}
   - {fileID: 539892538}

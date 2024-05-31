@@ -8,7 +8,7 @@ public class LinearProgressionAuthApacheLogin : MonoBehaviour
 {
     [Header("Auth Server")]
     [TextArea(3, 4)]
-    public string Apache = "http://localhost/";
+    public string Apache = "http://slimetric.rf.gd/";
     public string Segment = "login/";
 
     [Header("Auth Settings")]
@@ -66,7 +66,7 @@ public class LinearProgressionAuthApacheLogin : MonoBehaviour
         pass_focused = Password.isFocused;
     }
 
-    public void SetCurrentSession() 
+    public void SetCurrentSession()
     {
         PlayerPrefs.SetString(LinearProgressionAuthApache.CURRENT_EMAIL, Email.text);
         PlayerPrefs.SetString(LinearProgressionAuthApache.CURRENT_PASS, Password.text);

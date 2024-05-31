@@ -8,7 +8,7 @@ public class LinearProgressionAuthApacheForgot : MonoBehaviour
 {
     [Header("Auth Server")]
     [TextArea(3, 4)]
-    public string Apache = "http://localhost/";
+    public string Apache = "http://slimetric.rf.gd";
     public string Segment = "forgot/";
 
     [Header("Auth Settings")]

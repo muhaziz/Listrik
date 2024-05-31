@@ -312,7 +312,7 @@ PrefabInstance:
     - target: {fileID: 8382655276361830678, guid: dea9d52b9fc703246b5e09eeca086ad4, type: 3}
       propertyPath: soundEffect
       value: 
-      objectReference: {fileID: 8300000, guid: 11c4886345f218e479c98c596413276b, type: 3}
+      objectReference: {fileID: 8300000, guid: bf4e26ed5c8d5104581be92d316d3d78, type: 3}
     - target: {fileID: 8382655276361830678, guid: dea9d52b9fc703246b5e09eeca086ad4, type: 3}
       propertyPath: externalAudioSource
       value: 
@@ -2442,7 +2442,7 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1500
+  m_MaximumTileChangeCount: 2000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
 --- !u!1 &858529124
@@ -4472,8 +4472,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00009995699, y: 0.00045001507, z: 0}
-    m_Extent: {x: 1.0004001, y: 1.00045, z: 0}
+    m_Center: {x: 0.00029999018, y: -0.00009995699, z: 0}
+    m_Extent: {x: 1.0005, y: 1.0004001, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.34
@@ -4695,8 +4695,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00024998188, y: -0.00024998188, z: 0}
-    m_Extent: {x: 1.00015, y: 1.00035, z: 0}
+    m_Center: {x: 0.00020000339, y: 0.00014999509, z: 0}
+    m_Extent: {x: 1, y: 0.99944997, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

@@ -1331,7 +1331,7 @@ MonoBehaviour:
   playerTag: Player
   objectToActivate: {fileID: 920267102}
   ResultMenu: {fileID: 1609427658}
-  resultActive: {fileID: 0}
+  resultActive: {fileID: 1811555814}
   coinText: {fileID: 844119142}
   scaleText: {fileID: 1811555812}
   soundEffect: {fileID: 8300000, guid: 341a15ed5b649f24baa18a829f3f2811, type: 3}
@@ -1374,8 +1374,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.10430002, y: 0.26925004, z: 0}
-    m_Extent: {x: 1.3054, y: 1.27255, z: 0}
+    m_Center: {x: 0.10315001, y: 0.2704, z: 0}
+    m_Extent: {x: 1.30505, y: 1.2728, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1790,7 +1790,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 1.5158253, y: 0}
@@ -1818,8 +1818,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f15b9ddded32404ca53936bbb299400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
-  GameoverActive: {fileID: 0}
+  manager: {fileID: 767586196}
+  GameoverActive: {fileID: 1192395312}
   GameOver: {fileID: 1192395310}
   soundEffect: {fileID: 8300000, guid: e359510267404a0478fb163b539d9367, type: 3}
   externalAudioSource: {fileID: 767586195}
@@ -1895,6 +1895,10 @@ PrefabInstance:
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 1793894611}
+    - target: {fileID: 8382655276361830678, guid: dea9d52b9fc703246b5e09eeca086ad4, type: 3}
+      propertyPath: pauseActive
+      value: 
+      objectReference: {fileID: 1247924353}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3248,6 +3252,11 @@ PrefabInstance:
 --- !u!224 &1247924352 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2486766730312454175, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
+  m_PrefabInstance: {fileID: 1247924351}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1247924353 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6113391615456361461, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
   m_PrefabInstance: {fileID: 1247924351}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1301257789
@@ -6953,6 +6962,11 @@ MonoBehaviour:
 --- !u!224 &1811555813 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6368022866356687501, guid: 941d67b7d4014224a96be79e83bae477, type: 3}
+  m_PrefabInstance: {fileID: 1811555811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1811555814 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7736160198388943585, guid: 941d67b7d4014224a96be79e83bae477, type: 3}
   m_PrefabInstance: {fileID: 1811555811}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2007984094

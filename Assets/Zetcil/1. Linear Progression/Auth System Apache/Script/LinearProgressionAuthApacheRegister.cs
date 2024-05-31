@@ -10,7 +10,7 @@ public class LinearProgressionAuthApacheRegister : MonoBehaviour
 
     [Header("Auth Server")]
     [TextArea(3, 4)]
-    public string Apache = "http://localhost/";
+    public string Apache = "http://slimetric.rf.gd/";
     public string Segment = "register/";
 
     [Header("Register Settings")]
@@ -27,7 +27,7 @@ public class LinearProgressionAuthApacheRegister : MonoBehaviour
     public string FieldEmail = "email";
     public string FieldPassword = "password";
     public string FieldFirstName = "first_name";
-    public string FieldLastName = "last_name"; 
+    public string FieldLastName = "last_name";
     public string FieldGender = "gender";
     public string FieldOrganization = "organization";
 
@@ -84,7 +84,7 @@ public class LinearProgressionAuthApacheRegister : MonoBehaviour
         {
             if (School_focused)
             {
-                
+
             }
         }
 
