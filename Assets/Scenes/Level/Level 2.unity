@@ -3822,7 +3822,7 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1500
+  m_MaximumTileChangeCount: 2000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
 --- !u!1 &720651971
@@ -4887,8 +4887,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00014999509, y: 0.00009995699, z: 0}
-    m_Extent: {x: 0.99995005, y: 1.0002999, z: 0}
+    m_Center: {x: -0.00029999018, y: 0, z: 0}
+    m_Extent: {x: 1.0005, y: 0.9998, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
