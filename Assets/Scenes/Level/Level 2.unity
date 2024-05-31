@@ -199,7 +199,7 @@ PrefabInstance:
     - target: {fileID: 8382655276361830678, guid: dea9d52b9fc703246b5e09eeca086ad4, type: 3}
       propertyPath: soundEffect
       value: 
-      objectReference: {fileID: 8300000, guid: 11c4886345f218e479c98c596413276b, type: 3}
+      objectReference: {fileID: 8300000, guid: bf4e26ed5c8d5104581be92d316d3d78, type: 3}
     - target: {fileID: 8382655276361830678, guid: dea9d52b9fc703246b5e09eeca086ad4, type: 3}
       propertyPath: externalAudioSource
       value: 
@@ -4887,8 +4887,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00029999018, y: 0, z: 0}
-    m_Extent: {x: 1.0005, y: 0.9998, z: 0}
+    m_Center: {x: 0.000049978495, y: -0.00015002489, z: 0}
+    m_Extent: {x: 0.99915004, y: 1.0006499, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

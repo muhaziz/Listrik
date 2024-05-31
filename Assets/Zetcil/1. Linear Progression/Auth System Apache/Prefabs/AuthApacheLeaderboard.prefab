@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ac971be73a45ef4daa375e2a2f1fdf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Apache: http://slimetric.rf.gd
+  Apache: http://localhost/
   Segment: save_leaderboard/
   Username: {fileID: 0}
   Score: {fileID: 0}

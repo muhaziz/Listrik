@@ -10,7 +10,7 @@ public class LinearProgressionAuthApacheDataStatic : MonoBehaviour
 
     [Header("Auth Server")]
     [TextArea(3, 4)]
-    public string Apache = "http://slimetric.rf.gd/";
+    public string Apache = "http://localhost/";
     public string Segment = "save_progress/";
 
     [Header("Primary Data")]

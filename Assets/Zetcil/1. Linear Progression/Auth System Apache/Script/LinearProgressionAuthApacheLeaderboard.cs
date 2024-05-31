@@ -11,7 +11,7 @@ public class LinearProgressionAuthApacheLeaderboard : MonoBehaviour
 
     [Header("Auth Server")]
     [TextArea(3, 4)]
-    public string Apache = "http://slimetric.rf.gd/";
+    public string Apache = "http://localhost/";
     public string Segment = "save_leaderboard/";
 
     [Header("Register Settings")]

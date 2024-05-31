@@ -46,7 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputReader: {fileID: 0}
-  pausePanel: {fileID: 8995294099613536105, guid: 8276243e7ae438449a2aeb7ecf36c201, type: 3}
+  pausePanel: {fileID: 0}
+  pauseActive: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: bf4e26ed5c8d5104581be92d316d3d78, type: 3}
+  externalAudioSource: {fileID: 5035936086616411278}
+  Music: {fileID: 0}
   SceneMenu: Main Menu
 --- !u!82 &5035936086616411278
 AudioSource:

@@ -1358,8 +1358,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.10399997, y: 0.27024996, z: 0}
-    m_Extent: {x: 1.3053, y: 1.27265, z: 0}
+    m_Center: {x: 0.10374999, y: 0.26990002, z: 0}
+    m_Extent: {x: 1.30505, y: 1.2725999, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1839,6 +1839,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7096544835537404592, guid: b47eb0533b6c2f2448bda53e72e344d6, type: 3}
+      propertyPath: GameOverUI
+      value: 
+      objectReference: {fileID: 1725368445}
+    - target: {fileID: 7096544835537404592, guid: b47eb0533b6c2f2448bda53e72e344d6, type: 3}
+      propertyPath: GameOverActive
+      value: 
+      objectReference: {fileID: 248198094}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2202,8 +2210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f15b9ddded32404ca53936bbb299400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
-  GameoverActive: {fileID: 0}
+  manager: {fileID: 1012538340}
+  GameoverActive: {fileID: 248198094}
   GameOver: {fileID: 1725368445}
   soundEffect: {fileID: 8300000, guid: e359510267404a0478fb163b539d9367, type: 3}
   externalAudioSource: {fileID: 1012538339}
@@ -6406,7 +6414,7 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1500
+  m_MaximumTileChangeCount: 2000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
 --- !u!114 &1793894611 stripped
@@ -6770,11 +6778,11 @@ SceneRoots:
   - {fileID: 1016148454}
   - {fileID: 2021974845}
   - {fileID: 1079844718}
+  - {fileID: 1566493282}
   - {fileID: 862027124}
   - {fileID: 517790330}
   - {fileID: 157332367}
   - {fileID: 31796167}
   - {fileID: 1487471847}
-  - {fileID: 1065835908}
   - {fileID: 1527426685}
-  - {fileID: 1566493282}
+  - {fileID: 1065835908}

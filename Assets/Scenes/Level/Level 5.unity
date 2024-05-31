@@ -974,8 +974,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.10339999, y: 0.26964998, z: 0}
-    m_Extent: {x: 1.3051, y: 1.27245, z: 0}
+    m_Center: {x: 0.10444999, y: 0.27035004, z: 0}
+    m_Extent: {x: 1.30555, y: 1.27215, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5574,7 +5574,7 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1500
+  m_MaximumTileChangeCount: 2000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
 --- !u!114 &1793894611 stripped

@@ -13359,7 +13359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0d455a7b55b65842a0f7570678289f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Apache: http://slimetric.rf.gd
+  Apache: http://localhost/
   Segment: register/
   Email: {fileID: 4877014802045712781}
   Password: {fileID: 4877014801376443214}
@@ -18437,7 +18437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ServerType: 2
-  Apache: http://slimetric.rf.gd
+  Apache: http://localhost/
   MainXML: /config/server.xml
   NodeXML: Server/Apache
 --- !u!4 &6744480469409039869
@@ -22654,7 +22654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 354811f4b6f10d04ab270b778394e26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Apache: http://slimetric.rf.gd
+  Apache: http://localhost/
   Segment: login/
   Email: {fileID: 8691038348901814932}
   Password: {fileID: 8691038349303730263}
