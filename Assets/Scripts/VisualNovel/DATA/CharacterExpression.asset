@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 362a14945fd149d4eba841cd2b1f534f, type: 3}
   m_Name: CharacterExpression
   m_EditorClassIdentifier: 
-  expressionName: 
+  expressionName: Lazyan
   expressionSprite: {fileID: 0}
