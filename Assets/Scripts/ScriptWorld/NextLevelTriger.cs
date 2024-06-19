@@ -17,8 +17,8 @@ public class NextLevelTrigger : MonoBehaviour
     public AudioClip soundEffect;
     public AudioSource externalAudioSource;
     public GameObject Music;
-    public float Bintang1 = .7f;
-    public float Bintang2 = .2f;
+    private float Bintang1 = .63f;
+    private float Bintang2 = .25f;
     public float delayBeforeLoading = 1f;
 
     private void OnTriggerEnter2D(Collider2D collision)

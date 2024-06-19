@@ -97,8 +97,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00050002337, y: -0.00045001507, z: 0}
-    m_Extent: {x: 0.9998, y: 1.00035, z: 0}
+    m_Center: {x: -0.00054997206, y: 0.00055000186, z: 0}
+    m_Extent: {x: 0.99995, y: 1.00035, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.34
@@ -221,7 +221,7 @@ MonoBehaviour:
   <Animator>k__BackingField: {fileID: 0}
   <tr>k__BackingField: {fileID: 2005351727878985678}
   <MovementSpeed>k__BackingField: 5
-  <DashPower>k__BackingField: 18
+  <DashPower>k__BackingField: 17
   <DashCooldown>k__BackingField: 1
   <DashTime>k__BackingField: 0.2
   IsNegative: 0
@@ -233,7 +233,7 @@ MonoBehaviour:
   flipRotationY: 180
   GameOverUI: {fileID: 0}
   GameOverActive: {fileID: 0}
-  <JumpForce>k__BackingField: 8
+  <JumpForce>k__BackingField: 6.6
   <MaxReduction>k__BackingField: 0.5
   <ReductionRate>k__BackingField: 0.3
   isground: 0

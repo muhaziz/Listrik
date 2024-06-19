@@ -2070,6 +2070,10 @@ PrefabInstance:
       propertyPath: GameOverActive
       value: 
       objectReference: {fileID: 516833138}
+    - target: {fileID: 7096544835537404592, guid: b47eb0533b6c2f2448bda53e72e344d6, type: 3}
+      propertyPath: <JumpForce>k__BackingField
+      value: 7.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4760,10 +4764,8 @@ MonoBehaviour:
   Segment: save_leaderboard/
   Username: {fileID: 0}
   Score: {fileID: 0}
-  Level: {fileID: 0}
   FieldUsername: name
   FieldScore: score
-  FieldLevel: level
   LeaderboardSuccessEvent:
     m_PersistentCalls:
       m_Calls: []

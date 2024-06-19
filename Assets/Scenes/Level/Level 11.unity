@@ -1467,8 +1467,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.10429996, y: 0.27005, z: 0}
-    m_Extent: {x: 1.3057001, y: 1.27315, z: 0}
+    m_Center: {x: 0.10385001, y: 0.26954997, z: 0}
+    m_Extent: {x: 1.30545, y: 1.27255, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2533,7 +2533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8602866469021831760, guid: 29e24df2327b2e1468c526df209e2287, type: 3}
       propertyPath: magneticForce
-      value: 40
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8602866469021831760, guid: 29e24df2327b2e1468c526df209e2287, type: 3}
       propertyPath: magneticRadius
@@ -7226,7 +7226,7 @@ Transform:
   m_GameObject: {fileID: 2062751255}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.14, y: 5.25, z: 0.37922883}
+  m_LocalPosition: {x: 16.14, y: 5.11, z: 0.37922883}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

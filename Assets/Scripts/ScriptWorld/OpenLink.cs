@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class OpenLink : MonoBehaviour
 {
-    public string linkURL = "https://youtu.be/TBcfhJoCVQo?si=2I8CxzyqtJ0zqm7O";
+    private string linkURL = "https://tel-u.ac.id/slimetric";
 
     public void OpenExternalLink()
     {
