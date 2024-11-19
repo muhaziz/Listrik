@@ -573,17 +573,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e878ddfb4aca8442b53d04c25f095ea, type: 3}
---- !u!114 &157332368 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4085407521247127685, guid: 8e878ddfb4aca8442b53d04c25f095ea, type: 3}
-  m_PrefabInstance: {fileID: 157332367}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ac971be73a45ef4daa375e2a2f1fdf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &206930326 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4518157895919061175, guid: 941d67b7d4014224a96be79e83bae477, type: 3}
@@ -1311,7 +1300,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 1012538340}
-  leaderboard: {fileID: 157332368}
   playerTag: Player
   objectToActivate: {fileID: 920267102}
   ResultMenu: {fileID: 533835637}
@@ -1321,8 +1309,6 @@ MonoBehaviour:
   soundEffect: {fileID: 8300000, guid: 341a15ed5b649f24baa18a829f3f2811, type: 3}
   externalAudioSource: {fileID: 1012538339}
   Music: {fileID: 1409446820}
-  Bintang1: 0.7
-  Bintang2: 0.2
   delayBeforeLoading: 1
 --- !u!114 &539892540
 MonoBehaviour:
@@ -1358,8 +1344,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.10374999, y: 0.26990002, z: 0}
-    m_Extent: {x: 1.30505, y: 1.2725999, z: 0}
+    m_Center: {x: 0.104200006, y: 0.27000004, z: 0}
+    m_Extent: {x: 1.3045, y: 1.2732999, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2312,6 +2298,18 @@ PrefabInstance:
     - target: {fileID: 390927117869836900, guid: e2caf9e3a4ccf9b45869b1c012e9ef63, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237415745604316571, guid: e2caf9e3a4ccf9b45869b1c012e9ef63, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237415745604316571, guid: e2caf9e3a4ccf9b45869b1c012e9ef63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602866469021831760, guid: e2caf9e3a4ccf9b45869b1c012e9ef63, type: 3}
+      propertyPath: magneticRadius
+      value: 5.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

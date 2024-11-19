@@ -587,7 +587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f15b9ddded32404ca53936bbb299400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
+  manager: {fileID: 767586196}
   GameoverActive: {fileID: 0}
   GameOver: {fileID: 1192395310}
   soundEffect: {fileID: 8300000, guid: e359510267404a0478fb163b539d9367, type: 3}
@@ -927,7 +927,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 767586196}
-  leaderboard: {fileID: 972049545}
   playerTag: Player
   objectToActivate: {fileID: 920267102}
   ResultMenu: {fileID: 1609427658}
@@ -937,8 +936,6 @@ MonoBehaviour:
   soundEffect: {fileID: 8300000, guid: 341a15ed5b649f24baa18a829f3f2811, type: 3}
   externalAudioSource: {fileID: 767586195}
   Music: {fileID: 1409446820}
-  Bintang1: 0.7
-  Bintang2: 0.2
   delayBeforeLoading: 1
 --- !u!114 &539892540
 MonoBehaviour:
@@ -974,8 +971,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.103900015, y: 0.2708, z: 0}
-    m_Extent: {x: 1.3048, y: 1.2728, z: 0}
+    m_Center: {x: 0.104550004, y: 0.27005005, z: 0}
+    m_Extent: {x: 1.30555, y: 1.27185, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1962,17 +1959,6 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!114 &972049545 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4085407521247127685, guid: 8e878ddfb4aca8442b53d04c25f095ea, type: 3}
-  m_PrefabInstance: {fileID: 1788747630}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ac971be73a45ef4daa375e2a2f1fdf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1012529666 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4518157895919061175, guid: 941d67b7d4014224a96be79e83bae477, type: 3}

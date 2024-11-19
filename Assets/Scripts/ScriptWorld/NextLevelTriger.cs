@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class NextLevelTrigger : MonoBehaviour
 {
     public GameManager manager;
-    public LinearProgressionAuthApacheLeaderboard leaderboard;
+    // public LinearProgressionAuthApacheLeaderboard leaderboard;
     public string playerTag = "Player";
     public GameObject objectToActivate;
     public GameObject ResultMenu;
@@ -54,7 +54,7 @@ public class NextLevelTrigger : MonoBehaviour
             coinText.text = "Coins: " + coinCount.ToString();
             scaleText.text = scaledPercentage.ToString("F0");
             ResultMenu.GetComponent<ResultMenu>().SetStarsActive(coinCount);
-            leaderboard.InvokeLeaderboard();
+            // leaderboard.InvokeLeaderboard();
             StartCoroutine(LoadNextLevelWithDelay());
 
         }
